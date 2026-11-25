@@ -76,13 +76,14 @@
     html {
       scroll-behavior: smooth;
       scroll-padding-top: 88px;
+      overflow-x: clip;
     }
 
     body {
       background-color: var(--bg-main);
       color: var(--text-main);
       font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
-      overflow-x: hidden;
+      overflow-x: clip;
       -webkit-font-smoothing: antialiased;
     }
 
@@ -193,7 +194,7 @@
   </style>
 </head>
 
-<body class="bg-cream text-ink pb-20 md:pb-0 selection:bg-forest selection:text-white">
+<body class="bg-cream text-ink pb-24 md:pb-0 selection:bg-forest selection:text-white">
   <!-- Skip to Main Content for Keyboard/Screen Reader Users -->
   <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:rounded-lg focus:bg-forest focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-white">
     Skip to main content
@@ -203,25 +204,25 @@
        SECTION 01 – STICKY NAVIGATION
        ======================================================================== -->
   <header id="navbar" class="site-nav sticky top-0 z-50 w-full">
-    <div class="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-3 sm:px-6 lg:px-8">
+    <div class="mx-auto flex max-w-7xl items-center justify-between gap-2 sm:gap-3 px-3.5 py-2.5 sm:px-6 sm:py-3 lg:px-8">
       <!-- Left: Brand Wordmark + Leaf Emblem + Trust Pill -->
       <div class="flex items-center gap-3 min-w-0">
-        <a href="#home" class="group flex items-center gap-2.5 shrink-0" aria-label="Fir Milenge Home">
-          <span class="flex h-9 w-9 items-center justify-center rounded-full bg-forest/10 border border-forest/15 transition-colors group-hover:bg-forest/15" aria-hidden="true">
+        <a href="#home" class="group flex items-center gap-2 sm:gap-2.5 min-w-0 shrink-0" aria-label="Fir Milenge Home">
+          <span class="flex h-8 w-8 sm:h-9 sm:w-9 items-center justify-center rounded-full bg-forest/10 border border-forest/15 transition-colors group-hover:bg-forest/15 shrink-0" aria-hidden="true">
             <!-- Custom Leaf-Inspired Vegetarian Brand Symbol -->
-            <svg class="h-5 w-5 text-forest" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <svg class="h-4 w-4 sm:h-5 sm:w-5 text-forest" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
               <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" fill="#2D6A4F" fill-opacity="0.18"/>
               <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/>
               <circle cx="15.5" cy="7.5" r="1.2" fill="#C59B27" stroke="none"/>
             </svg>
           </span>
           <div class="flex flex-col leading-none">
-            <span class="font-serif text-lg sm:text-xl font-bold tracking-wide text-forest">FIR MILENGE</span>
+            <span class="font-serif text-base sm:text-xl font-bold tracking-wide text-forest whitespace-nowrap">FIR MILENGE</span>
             <span class="text-[10px] font-semibold uppercase tracking-[0.18em] text-gold-dark hidden sm:block">Malad West • Mumbai</span>
           </div>
         </a>
 
-        <span class="hidden xl:inline-flex items-center gap-1.5 rounded-full border border-forest/20 bg-forest/5 px-3 py-1 text-xs font-semibold text-forest">
+        <span class="hidden xl:inline-flex items-center gap-1.5 rounded-full border border-forest/20 bg-forest/5 px-3 py-1 text-xs font-semibold text-forest whitespace-nowrap">
           <span class="h-2 w-2 rounded-full bg-forest-light" aria-hidden="true"></span>
           100% Pure Veg &amp; Jain
         </span>
@@ -229,24 +230,24 @@
 
       <!-- Center: Desktop Navigation Links -->
       <nav class="hidden lg:flex items-center gap-7" aria-label="Primary Navigation">
-        <a href="#home" class="nav-link text-sm font-semibold text-ink hover:text-forest transition-colors relative py-1">Home</a>
-        <a href="#menu" class="nav-link text-sm font-semibold text-ink hover:text-forest transition-colors relative py-1">Our Menu</a>
-        <a href="#parties" class="nav-link text-sm font-semibold text-ink hover:text-forest transition-colors relative py-1">Private Parties</a>
-        <a href="#reviews" class="nav-link text-sm font-semibold text-ink hover:text-forest transition-colors relative py-1">Reviews</a>
-        <a href="#location" class="nav-link text-sm font-semibold text-ink hover:text-forest transition-colors relative py-1">Location</a>
+        <a href="#home" class="nav-link text-sm font-semibold text-ink hover:text-forest transition-colors relative py-1 whitespace-nowrap">Home</a>
+        <a href="#menu" class="nav-link text-sm font-semibold text-ink hover:text-forest transition-colors relative py-1 whitespace-nowrap">Our Menu</a>
+        <a href="#parties" class="nav-link text-sm font-semibold text-ink hover:text-forest transition-colors relative py-1 whitespace-nowrap">Private Parties</a>
+        <a href="#reviews" class="nav-link text-sm font-semibold text-ink hover:text-forest transition-colors relative py-1 whitespace-nowrap">Reviews</a>
+        <a href="#location" class="nav-link text-sm font-semibold text-ink hover:text-forest transition-colors relative py-1 whitespace-nowrap">Location</a>
       </nav>
 
       <!-- Right: Primary CTA + Mobile Controls -->
       <div class="flex items-center gap-2 sm:gap-3 shrink-0">
-        <a href="#reserve" class="inline-flex items-center gap-2 rounded-full bg-forest px-3.5 py-2 sm:px-5 sm:py-2.5 text-xs sm:text-sm font-semibold tracking-wide text-white shadow-sm transition-all hover:bg-forest-light hover:shadow-md">
-          <i data-lucide="message-circle" class="h-4 w-4 text-gold-light" aria-hidden="true"></i>
+        <a href="#reserve" class="inline-flex items-center gap-1.5 sm:gap-2 rounded-full bg-forest px-3 py-2 sm:px-5 sm:py-2.5 text-[11px] sm:text-sm font-semibold tracking-wide text-white shadow-sm transition-all hover:bg-forest-light hover:shadow-md whitespace-nowrap">
+          <i data-lucide="message-circle" class="h-3.5 w-3.5 sm:h-4 sm:w-4 text-gold-light shrink-0" aria-hidden="true"></i>
           <span>BOOK A TABLE</span>
         </a>
 
         <button
           id="mobile-menu-btn"
           type="button"
-          class="inline-flex lg:hidden h-10 w-10 items-center justify-center rounded-full border border-sand bg-white text-forest transition-colors hover:bg-forest/5"
+          class="inline-flex lg:hidden h-10 w-10 items-center justify-center rounded-full border border-sand bg-white text-forest transition-colors hover:bg-forest/5 shrink-0"
           aria-label="Open navigation menu"
           aria-expanded="false"
           aria-controls="mobile-menu-panel"
@@ -258,7 +259,7 @@
     </div>
 
     <!-- Mobile Navigation Drawer -->
-    <div id="mobile-menu-panel" class="hidden lg:hidden border-t border-sand bg-cream/98 backdrop-blur-md">
+    <div id="mobile-menu-panel" class="hidden lg:hidden border-t border-sand bg-cream/[0.98] backdrop-blur-md shadow-nav">
       <nav class="mx-auto flex max-w-7xl flex-col px-4 py-4 space-y-1" aria-label="Mobile Navigation">
         <div class="mb-2 flex items-center justify-between rounded-lg bg-forest/5 px-3 py-2 text-xs font-semibold text-forest">
           <span class="inline-flex items-center gap-1.5">
@@ -306,35 +307,35 @@
       </div>
 
       <!-- Hero Content -->
-      <div class="relative z-10 mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8 lg:py-28">
+      <div class="relative z-10 mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-20 lg:px-8 lg:py-28">
         <div class="max-w-3xl">
-          <div class="hero-animate inline-flex items-center gap-2 rounded-full border border-gold/50 bg-forest-dark/60 px-4 py-1.5 text-[11px] sm:text-xs font-semibold uppercase tracking-[0.16em] text-gold-light backdrop-blur-sm">
-            <span class="h-1.5 w-1.5 rounded-full bg-gold" aria-hidden="true"></span>
-            MALAD WEST'S PURE VEGETARIAN DINING DESTINATION
+          <div class="hero-animate inline-flex max-w-full items-center gap-2 rounded-2xl sm:rounded-full border border-gold/50 bg-forest-dark/60 px-3.5 py-1.5 text-[10px] sm:text-xs font-semibold uppercase tracking-[0.12em] sm:tracking-[0.16em] text-gold-light backdrop-blur-sm">
+            <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-gold" aria-hidden="true"></span>
+            <span>MALAD WEST'S PURE VEGETARIAN DINING DESTINATION</span>
           </div>
 
-          <h1 class="hero-animate hero-delay-1 mt-6 font-serif text-3xl font-bold leading-[1.14] tracking-tight text-white sm:text-5xl lg:text-[3.4rem]">
+          <h1 class="hero-animate hero-delay-1 mt-5 sm:mt-6 font-serif text-3xl font-bold leading-[1.16] tracking-tight text-white sm:text-5xl lg:text-[3.4rem]">
             Mith Chowky's Favourite Pure Veg &amp; Jain Family Dining
           </h1>
 
-          <p class="hero-animate hero-delay-2 mt-5 max-w-2xl text-base leading-relaxed text-cream/90 sm:text-lg">
+          <p class="hero-animate hero-delay-2 mt-4 sm:mt-5 max-w-2xl text-sm leading-relaxed text-cream/90 sm:text-lg">
             Good food, warm hospitality and memorable family moments. Discover signature vegetarian flavours, Jain-friendly preparations and comfortable family dining at Fir Milenge.
           </p>
 
-          <div class="hero-animate hero-delay-3 mt-8 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
+          <div class="hero-animate hero-delay-3 mt-7 sm:mt-8 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
             <a
               href="#reserve"
-              class="inline-flex items-center justify-center gap-2.5 rounded-full bg-gold px-7 py-3.5 text-sm font-bold tracking-wide text-forest-dark shadow-lg transition-all hover:bg-gold-light hover:-translate-y-0.5"
+              class="inline-flex w-full sm:w-auto min-h-[48px] items-center justify-center gap-2.5 rounded-full bg-gold px-7 py-3.5 text-sm font-bold tracking-wide text-forest-dark shadow-lg transition-all hover:bg-gold-light hover:-translate-y-0.5"
             >
-              <i data-lucide="message-circle" class="h-4 w-4" aria-hidden="true"></i>
+              <i data-lucide="message-circle" class="h-4 w-4 shrink-0" aria-hidden="true"></i>
               <span>RESERVE YOUR TABLE</span>
             </a>
             <a
               href="#menu"
-              class="inline-flex items-center justify-center gap-2.5 rounded-full border border-white/60 bg-white/10 px-7 py-3.5 text-sm font-semibold tracking-wide text-white backdrop-blur-sm transition-all hover:border-gold-light hover:bg-white/15"
+              class="inline-flex w-full sm:w-auto min-h-[48px] items-center justify-center gap-2.5 rounded-full border border-white/60 bg-white/10 px-7 py-3.5 text-sm font-semibold tracking-wide text-white backdrop-blur-sm transition-all hover:border-gold-light hover:bg-white/15"
             >
               <span>EXPLORE OUR MENU</span>
-              <i data-lucide="arrow-right" class="h-4 w-4" aria-hidden="true"></i>
+              <i data-lucide="arrow-right" class="h-4 w-4 shrink-0" aria-hidden="true"></i>
             </a>
           </div>
         </div>
@@ -343,19 +344,19 @@
       <!-- Bottom Visual Trust Strip -->
       <div class="relative z-10 border-t border-gold/25 bg-[#143326]/95 backdrop-blur-sm">
         <div class="mx-auto grid max-w-7xl grid-cols-1 divide-y divide-white/10 px-4 sm:grid-cols-2 sm:divide-y-0 lg:grid-cols-4 lg:divide-x lg:divide-white/15 sm:px-6 lg:px-8">
-          <div class="flex items-center gap-3 py-3.5 lg:px-4 lg:first:pl-0">
+          <div class="flex items-center gap-3 py-3 sm:py-3.5 lg:px-4 lg:first:pl-0">
             <i data-lucide="leaf" class="h-5 w-5 shrink-0 text-gold-light" aria-hidden="true"></i>
             <span class="text-xs sm:text-sm font-medium text-cream">100% Pure Vegetarian.</span>
           </div>
-          <div class="flex items-center gap-3 py-3.5 lg:px-5">
+          <div class="flex items-center gap-3 py-3 sm:py-3.5 lg:px-5">
             <i data-lucide="check-circle-2" class="h-5 w-5 shrink-0 text-gold-light" aria-hidden="true"></i>
             <span class="text-xs sm:text-sm font-medium text-cream">Jain-Friendly Preparations.</span>
           </div>
-          <div class="flex items-center gap-3 py-3.5 lg:px-5">
+          <div class="flex items-center gap-3 py-3 sm:py-3.5 lg:px-5">
             <i data-lucide="train-front" class="h-5 w-5 shrink-0 text-gold-light" aria-hidden="true"></i>
             <span class="text-xs sm:text-sm font-medium text-cream">Opposite Mithchowki Metro.</span>
           </div>
-          <div class="flex items-center gap-3 py-3.5 lg:px-5 lg:last:pr-0">
+          <div class="flex items-center gap-3 py-3 sm:py-3.5 lg:px-5 lg:last:pr-0">
             <i data-lucide="users" class="h-5 w-5 shrink-0 text-gold-light" aria-hidden="true"></i>
             <span class="text-xs sm:text-sm font-medium text-cream">Private Dining for 20–25 Guests.</span>
           </div>
@@ -366,12 +367,12 @@
     <!-- ========================================================================
          SECTION 03 – BRAND INTRODUCTION
          ======================================================================== -->
-    <section id="about" class="py-16 sm:py-22 lg:py-24 bg-cream">
+    <section id="about" class="py-14 sm:py-20 lg:py-24 bg-cream">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 items-center gap-10 lg:grid-cols-12 lg:gap-14">
+        <div class="grid grid-cols-1 items-center gap-8 sm:gap-10 lg:grid-cols-12 lg:gap-14">
           <!-- Left: Restaurant Dining Image -->
-          <div class="reveal-on-scroll lg:col-span-6">
-            <div class="relative overflow-hidden rounded-xl border border-sand bg-white p-2.5 shadow-soft">
+          <div class="reveal-on-scroll min-w-0 lg:col-span-6">
+            <div class="relative overflow-hidden rounded-xl border border-sand bg-white p-2 sm:p-2.5 shadow-soft">
               <div class="aspect-[16/11] w-full overflow-hidden rounded-lg bg-sand/40">
                 <img
                   src="https://images.unsplash.com/photo-1577065362004-d1cf34a6063f?auto=format&fit=crop&w=1200&q=80"
@@ -383,7 +384,7 @@
                   onerror="handleImageError(this, 'Fir Milenge Family Dining Interior')"
                 />
               </div>
-              <div class="mt-2.5 flex items-center justify-between px-1.5 py-1 text-xs text-ink-muted">
+              <div class="mt-2.5 flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between px-1.5 py-1 text-xs text-ink-muted">
                 <span class="font-semibold text-forest">Rajanpara flamingos 102 • Link Rd, Malad West</span>
                 <span>12:00 PM – 11:30 PM Daily</span>
               </div>
@@ -462,20 +463,20 @@
         <div class="mt-10 rounded-xl border border-sand bg-white p-4 sm:p-5 shadow-card">
           <div class="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
             <!-- Horizontally Scrollable Category Pills -->
-            <div class="flex items-center gap-2 overflow-x-auto no-scrollbar pb-1 lg:pb-0" role="group" aria-label="Menu Categories">
-              <button type="button" data-category="All Dishes" aria-pressed="true" class="category-btn shrink-0 rounded-full px-4 py-2 text-xs sm:text-sm font-semibold transition-all bg-forest text-white">
+            <div class="flex items-center gap-2 overflow-x-auto no-scrollbar snap-x pb-1 lg:pb-0 -mx-1 px-1" role="group" aria-label="Menu Categories">
+              <button type="button" data-category="All Dishes" aria-pressed="true" class="category-btn snap-start shrink-0 min-h-[40px] rounded-full px-4 py-2 text-xs sm:text-sm font-semibold transition-all bg-forest text-white">
                 All Dishes
               </button>
-              <button type="button" data-category="Chef's Signatures" aria-pressed="false" class="category-btn shrink-0 rounded-full border border-sand bg-cream px-4 py-2 text-xs sm:text-sm font-semibold text-ink transition-all hover:border-forest/40 hover:text-forest">
+              <button type="button" data-category="Chef's Signatures" aria-pressed="false" class="category-btn snap-start shrink-0 min-h-[40px] rounded-full border border-sand bg-cream px-4 py-2 text-xs sm:text-sm font-semibold text-ink transition-all hover:border-forest/40 hover:text-forest">
                 Chef's Signatures
               </button>
-              <button type="button" data-category="North Indian" aria-pressed="false" class="category-btn shrink-0 rounded-full border border-sand bg-cream px-4 py-2 text-xs sm:text-sm font-semibold text-ink transition-all hover:border-forest/40 hover:text-forest">
+              <button type="button" data-category="North Indian" aria-pressed="false" class="category-btn snap-start shrink-0 min-h-[40px] rounded-full border border-sand bg-cream px-4 py-2 text-xs sm:text-sm font-semibold text-ink transition-all hover:border-forest/40 hover:text-forest">
                 North Indian
               </button>
-              <button type="button" data-category="Oriental & Fusion" aria-pressed="false" class="category-btn shrink-0 rounded-full border border-sand bg-cream px-4 py-2 text-xs sm:text-sm font-semibold text-ink transition-all hover:border-forest/40 hover:text-forest">
+              <button type="button" data-category="Oriental & Fusion" aria-pressed="false" class="category-btn snap-start shrink-0 min-h-[40px] rounded-full border border-sand bg-cream px-4 py-2 text-xs sm:text-sm font-semibold text-ink transition-all hover:border-forest/40 hover:text-forest">
                 Oriental &amp; Fusion
               </button>
-              <button type="button" data-category="Continental & Pizza" aria-pressed="false" class="category-btn shrink-0 rounded-full border border-sand bg-cream px-4 py-2 text-xs sm:text-sm font-semibold text-ink transition-all hover:border-forest/40 hover:text-forest">
+              <button type="button" data-category="Continental & Pizza" aria-pressed="false" class="category-btn snap-start shrink-0 min-h-[40px] rounded-full border border-sand bg-cream px-4 py-2 text-xs sm:text-sm font-semibold text-ink transition-all hover:border-forest/40 hover:text-forest">
                 Continental &amp; Pizza
               </button>
             </div>
@@ -488,7 +489,7 @@
                 type="button"
                 role="switch"
                 aria-checked="false"
-                class="inline-flex items-center justify-between gap-3 rounded-full border border-forest/25 bg-forest/5 px-3.5 py-2 text-xs font-bold tracking-wide text-forest transition-all hover:bg-forest/10"
+                class="inline-flex w-full sm:w-auto min-h-[44px] items-center justify-between gap-3 rounded-full border border-forest/25 bg-forest/5 px-3.5 py-2 text-xs font-bold tracking-wide text-forest transition-all hover:bg-forest/10 shrink-0"
               >
                 <span class="inline-flex items-center gap-2">
                   <span id="jain-switch-track" class="relative inline-flex h-5 w-9 shrink-0 items-center rounded-full bg-gray-300 transition-colors">
@@ -500,14 +501,14 @@
               </button>
 
               <!-- Search Input -->
-              <div class="relative flex-1 sm:w-64">
+              <div class="relative flex-1 min-w-0 sm:w-64">
                 <label for="menu-search" class="sr-only">Search your favourite dish</label>
                 <i data-lucide="search" class="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-ink-muted" aria-hidden="true"></i>
                 <input
                   id="menu-search"
                   type="search"
                   placeholder="Search your favourite dish..."
-                  class="w-full rounded-full border border-sand bg-cream py-2 pl-10 pr-4 text-sm text-ink placeholder:text-ink-muted/75 focus:border-forest focus:bg-white focus:outline-none"
+                  class="min-h-[44px] w-full rounded-full border border-sand bg-cream py-2 pl-10 pr-4 text-base sm:text-sm text-ink placeholder:text-ink-muted/75 focus:border-forest focus:bg-white focus:outline-none"
                 />
               </div>
             </div>
@@ -523,7 +524,7 @@
         </div>
 
         <!-- Menu Cards Grid -->
-        <div id="menu-grid" class="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <div id="menu-grid" class="mt-8 grid grid-cols-1 gap-4 sm:gap-5 min-[520px]:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           <!-- Populated dynamically by renderMenu() -->
         </div>
 
@@ -564,7 +565,7 @@
     <!-- ========================================================================
          SECTION 05 – PRIVATE PARTIES & CELEBRATIONS
          ======================================================================== -->
-    <section id="parties" class="relative overflow-hidden bg-forest-dark py-16 sm:py-22 lg:py-24 text-white">
+    <section id="parties" class="relative overflow-hidden bg-forest-dark py-14 sm:py-20 lg:py-24 text-white">
       <!-- Celebration Backdrop -->
       <div class="absolute inset-0 z-0">
         <img
@@ -646,11 +647,11 @@
     <!-- ========================================================================
          SECTION 06 – DIRECT TABLE RESERVATION
          ======================================================================== -->
-    <section id="reserve" class="py-16 sm:py-22 lg:py-24 bg-cream">
+    <section id="reserve" class="py-14 sm:py-20 lg:py-24 bg-cream">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:items-start lg:gap-12">
+        <div class="grid grid-cols-1 gap-8 sm:gap-10 lg:grid-cols-12 lg:items-start lg:gap-12">
           <!-- Left Column: Restaurant Information -->
-          <div class="reveal-on-scroll lg:col-span-5">
+          <div class="reveal-on-scroll min-w-0 lg:col-span-5">
             <span class="text-xs font-bold uppercase tracking-[0.2em] text-gold-dark">Direct WhatsApp Booking</span>
             <h2 class="mt-2 font-serif text-3xl font-bold text-forest sm:text-4xl">
               Your Table Is Waiting.
@@ -664,7 +665,7 @@
                 <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-forest/10 text-forest">
                   <i data-lucide="clock" class="h-5 w-5" aria-hidden="true"></i>
                 </span>
-                <div>
+                <div class="min-w-0">
                   <p class="text-xs font-bold uppercase tracking-wider text-ink-muted">Opening Hours</p>
                   <p class="mt-0.5 text-sm sm:text-base font-semibold text-ink">12:00 PM – 11:30 PM Daily</p>
                 </div>
@@ -674,12 +675,12 @@
                 <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-forest/10 text-forest">
                   <i data-lucide="phone" class="h-5 w-5" aria-hidden="true"></i>
                 </span>
-                <div>
+                <div class="min-w-0">
                   <p class="text-xs font-bold uppercase tracking-wider text-ink-muted">Direct Reservations &amp; Takeaway</p>
-                  <p class="mt-0.5 text-sm sm:text-base font-semibold text-ink">
-                    <a href="tel:+919821611116" class="hover:text-forest underline decoration-sand underline-offset-4">+91 98216 11116</a>
-                    <span class="mx-1.5 text-sand">|</span>
-                    <a href="tel:+919619911116" class="hover:text-forest underline decoration-sand underline-offset-4">+91 96199 11116</a>
+                  <p class="mt-0.5 flex flex-wrap items-center gap-x-2.5 gap-y-1 text-sm sm:text-base font-semibold text-ink">
+                    <a href="tel:+919821611116" class="hover:text-forest underline decoration-sand underline-offset-4 whitespace-nowrap">+91 98216 11116</a>
+                    <span class="text-sand" aria-hidden="true">|</span>
+                    <a href="tel:+919619911116" class="hover:text-forest underline decoration-sand underline-offset-4 whitespace-nowrap">+91 96199 11116</a>
                   </p>
                 </div>
               </div>
@@ -688,9 +689,9 @@
                 <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-forest/10 text-forest">
                   <i data-lucide="map-pin" class="h-5 w-5" aria-hidden="true"></i>
                 </span>
-                <div>
+                <div class="min-w-0">
                   <p class="text-xs font-bold uppercase tracking-wider text-ink-muted">Address</p>
-                  <p class="mt-0.5 text-sm leading-relaxed font-medium text-ink">
+                  <p class="mt-0.5 text-sm leading-relaxed font-medium text-ink break-words">
                     Fir Milenge, Rajanpara flamingos 102, Pice of mind center, Link Rd, Malad, Jai Janata Nagar, Malad West, Mumbai, Maharashtra 400064.
                   </p>
                 </div>
@@ -700,7 +701,7 @@
                 <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-forest/10 text-forest">
                   <i data-lucide="sprout" class="h-5 w-5" aria-hidden="true"></i>
                 </span>
-                <div>
+                <div class="min-w-0">
                   <p class="text-xs font-bold uppercase tracking-wider text-ink-muted">Vegetarian Dining Assurance</p>
                   <p class="mt-0.5 text-sm font-medium text-ink">
                     100% Pure Vegetarian kitchen with dedicated Jain-friendly options on request.
@@ -711,15 +712,15 @@
           </div>
 
           <!-- Right Column: Reservation Form -->
-          <div class="reveal-on-scroll lg:col-span-7">
+          <div class="reveal-on-scroll min-w-0 lg:col-span-7">
             <form
               id="reservation-form"
               novalidate
-              class="rounded-xl border border-sand bg-white p-5 sm:p-8 shadow-soft transition-shadow"
+              class="rounded-xl border border-sand bg-white p-4 sm:p-8 shadow-soft transition-shadow"
             >
               <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
                 <!-- Guest Name -->
-                <div>
+                <div class="min-w-0">
                   <label for="guest-name" class="block text-xs font-bold uppercase tracking-wider text-ink">
                     Guest Name <span class="text-red-600">*</span>
                   </label>
@@ -730,13 +731,13 @@
                     required
                     autocomplete="name"
                     placeholder="Your full name"
-                    class="mt-1.5 w-full rounded-lg border border-sand bg-cream/60 px-3.5 py-2.5 text-sm text-ink placeholder:text-ink-muted/70 focus:border-forest focus:bg-white focus:outline-none"
+                    class="mt-1.5 min-h-[44px] w-full min-w-0 rounded-lg border border-sand bg-cream/60 px-3.5 py-2.5 text-base sm:text-sm text-ink placeholder:text-ink-muted/70 focus:border-forest focus:bg-white focus:outline-none"
                   />
                   <p id="guest-name-error" class="mt-1 hidden text-xs font-medium text-red-600" role="alert"></p>
                 </div>
 
                 <!-- Mobile Number -->
-                <div>
+                <div class="min-w-0">
                   <label for="guest-phone" class="block text-xs font-bold uppercase tracking-wider text-ink">
                     Mobile Number <span class="text-red-600">*</span>
                   </label>
@@ -751,14 +752,14 @@
                       required
                       autocomplete="tel-national"
                       placeholder="10-digit mobile number"
-                      class="w-full rounded-lg border border-sand bg-cream/60 py-2.5 pl-11 pr-3.5 text-sm text-ink placeholder:text-ink-muted/70 focus:border-forest focus:bg-white focus:outline-none"
+                      class="min-h-[44px] w-full min-w-0 rounded-lg border border-sand bg-cream/60 py-2.5 pl-11 pr-3.5 text-base sm:text-sm text-ink placeholder:text-ink-muted/70 focus:border-forest focus:bg-white focus:outline-none"
                     />
                   </div>
                   <p id="guest-phone-error" class="mt-1 hidden text-xs font-medium text-red-600" role="alert"></p>
                 </div>
 
                 <!-- Preferred Date -->
-                <div>
+                <div class="min-w-0">
                   <label for="preferred-date" class="block text-xs font-bold uppercase tracking-wider text-ink">
                     Preferred Date <span class="text-red-600">*</span>
                   </label>
@@ -767,13 +768,13 @@
                     name="preferredDate"
                     type="date"
                     required
-                    class="mt-1.5 w-full rounded-lg border border-sand bg-cream/60 px-3.5 py-2.5 text-sm text-ink focus:border-forest focus:bg-white focus:outline-none"
+                    class="mt-1.5 min-h-[44px] w-full max-w-full min-w-0 rounded-lg border border-sand bg-cream/60 px-3.5 py-2.5 text-base sm:text-sm text-ink focus:border-forest focus:bg-white focus:outline-none"
                   />
                   <p id="preferred-date-error" class="mt-1 hidden text-xs font-medium text-red-600" role="alert"></p>
                 </div>
 
                 <!-- Preferred Time Slot -->
-                <div>
+                <div class="min-w-0">
                   <label for="time-slot" class="block text-xs font-bold uppercase tracking-wider text-ink">
                     Preferred Time Slot <span class="text-red-600">*</span>
                   </label>
@@ -781,7 +782,7 @@
                     id="time-slot"
                     name="timeSlot"
                     required
-                    class="mt-1.5 w-full rounded-lg border border-sand bg-cream/60 px-3.5 py-2.5 text-sm text-ink focus:border-forest focus:bg-white focus:outline-none"
+                    class="mt-1.5 min-h-[44px] w-full min-w-0 rounded-lg border border-sand bg-cream/60 px-3.5 py-2.5 text-base sm:text-sm text-ink focus:border-forest focus:bg-white focus:outline-none"
                   >
                     <option value="Dinner: 7:30 PM – 11:30 PM">Dinner: 7:30 PM – 11:30 PM</option>
                     <option value="Lunch: 12:30 PM – 3:30 PM">Lunch: 12:30 PM – 3:30 PM</option>
@@ -789,7 +790,7 @@
                 </div>
 
                 <!-- Number of Guests -->
-                <div>
+                <div class="min-w-0">
                   <label for="guest-count" class="block text-xs font-bold uppercase tracking-wider text-ink">
                     Number of Guests <span class="text-red-600">*</span>
                   </label>
@@ -797,7 +798,7 @@
                     id="guest-count"
                     name="guestCount"
                     required
-                    class="mt-1.5 w-full rounded-lg border border-sand bg-cream/60 px-3.5 py-2.5 text-sm text-ink focus:border-forest focus:bg-white focus:outline-none"
+                    class="mt-1.5 min-h-[44px] w-full min-w-0 rounded-lg border border-sand bg-cream/60 px-3.5 py-2.5 text-base sm:text-sm text-ink focus:border-forest focus:bg-white focus:outline-none"
                   >
                     <option value="2 Guests">2 Guests</option>
                     <option value="4 Guests">4 Guests</option>
@@ -809,14 +810,14 @@
                 </div>
 
                 <!-- Seating Preference -->
-                <div>
+                <div class="min-w-0">
                   <label for="seating-pref" class="block text-xs font-bold uppercase tracking-wider text-ink">
                     Seating Preference
                   </label>
                   <select
                     id="seating-pref"
                     name="seatingPreference"
-                    class="mt-1.5 w-full rounded-lg border border-sand bg-cream/60 px-3.5 py-2.5 text-sm text-ink focus:border-forest focus:bg-white focus:outline-none"
+                    class="mt-1.5 min-h-[44px] w-full min-w-0 rounded-lg border border-sand bg-cream/60 px-3.5 py-2.5 text-base sm:text-sm text-ink focus:border-forest focus:bg-white focus:outline-none"
                   >
                     <option value="Standard Dining">Standard Dining</option>
                     <option value="Quiet Corner / Family Booth">Quiet Corner / Family Booth</option>
@@ -827,12 +828,12 @@
 
               <!-- Jain Dietary Checkbox -->
               <div class="mt-4">
-                <label class="inline-flex cursor-pointer items-center gap-2.5 rounded-lg border border-forest/20 bg-forest/5 px-3.5 py-2.5 text-sm font-semibold text-forest">
+                <label class="inline-flex w-full sm:w-auto min-h-[44px] cursor-pointer items-center gap-2.5 rounded-lg border border-forest/20 bg-forest/5 px-3.5 py-2.5 text-sm font-semibold text-forest">
                   <input
                     id="jain-requirement"
                     name="jainRequirement"
                     type="checkbox"
-                    class="h-4 w-4 rounded border-forest text-forest focus:ring-gold"
+                    class="h-4 w-4 shrink-0 rounded border-forest text-forest focus:ring-gold"
                   />
                   <span>Require Jain Food Preparations.</span>
                 </label>
@@ -848,7 +849,7 @@
                   name="additionalNotes"
                   rows="2"
                   placeholder="Celebration occasion, high chair request, Swaminarayan preferences, or custom timing..."
-                  class="mt-1.5 w-full rounded-lg border border-sand bg-cream/60 px-3.5 py-2.5 text-sm text-ink placeholder:text-ink-muted/70 focus:border-forest focus:bg-white focus:outline-none"
+                  class="mt-1.5 w-full min-w-0 rounded-lg border border-sand bg-cream/60 px-3.5 py-2.5 text-base sm:text-sm text-ink placeholder:text-ink-muted/70 focus:border-forest focus:bg-white focus:outline-none"
                 ></textarea>
               </div>
 
@@ -859,9 +860,9 @@
                 </p>
                 <button
                   type="submit"
-                  class="shrink-0 inline-flex items-center justify-center gap-2.5 rounded-full bg-forest px-7 py-3.5 text-sm font-bold tracking-wide text-white shadow-md transition-all hover:bg-forest-light hover:shadow-lg"
+                  class="w-full sm:w-auto min-h-[48px] shrink-0 inline-flex items-center justify-center gap-2.5 rounded-full bg-forest px-7 py-3.5 text-sm font-bold tracking-wide text-white shadow-md transition-all hover:bg-forest-light hover:shadow-lg"
                 >
-                  <i data-lucide="message-circle" class="h-4 w-4 text-gold-light" aria-hidden="true"></i>
+                  <i data-lucide="message-circle" class="h-4 w-4 text-gold-light shrink-0" aria-hidden="true"></i>
                   <span>CONFIRM VIA WHATSAPP</span>
                 </button>
               </div>
@@ -951,9 +952,9 @@
     <section id="takeaway" class="py-10 sm:py-14 bg-cream">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="reveal-on-scroll relative overflow-hidden rounded-2xl border border-gold/40 bg-forest text-white shadow-soft">
-          <div class="grid grid-cols-1 items-center lg:grid-cols-12">
+          <div class="grid grid-cols-1 items-center lg:items-stretch lg:grid-cols-12">
             <!-- Copy & CTAs -->
-            <div class="relative z-10 p-7 sm:p-10 lg:col-span-7 lg:p-12">
+            <div class="relative z-10 p-6 sm:p-10 lg:col-span-7 lg:p-12">
               <span class="inline-block rounded-full border border-gold/50 bg-forest-dark/60 px-3.5 py-1 text-[11px] font-bold uppercase tracking-[0.18em] text-gold-light">
                 Direct Takeaway • Zero App Markups
               </span>
@@ -985,7 +986,7 @@
             </div>
 
             <!-- Appetizing Food Image -->
-            <div class="relative h-56 sm:h-64 lg:col-span-5 lg:h-full">
+            <div class="relative h-56 sm:h-64 lg:col-span-5 lg:h-full lg:min-h-[320px]">
               <img
                 src="https://images.unsplash.com/photo-1767114915989-c6ab3c8fc42e?auto=format&fit=crop&w=1000&q=80"
                 alt="Freshly prepared bowls of pure vegetarian Indian curry, basmati rice, and aromatic spices ready for direct takeaway"
@@ -1034,23 +1035,23 @@
                 href="https://www.google.com/maps/dir/?api=1&destination=Fir+milenge%2C+Rajanpara+flamingos+102%2C+Pice+of+mind+center%2C+Link+Rd%2C+Malad%2C+Jai+Janata+Nagar%2C+Malad+West%2C+Mumbai%2C+Maharashtra+400064"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="inline-flex items-center justify-center gap-2 rounded-full bg-forest px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-forest-light"
+                class="w-full sm:w-auto min-h-[48px] inline-flex items-center justify-center gap-2 rounded-full bg-forest px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-forest-light"
               >
-                <i data-lucide="navigation" class="h-4 w-4 text-gold-light" aria-hidden="true"></i>
+                <i data-lucide="navigation" class="h-4 w-4 text-gold-light shrink-0" aria-hidden="true"></i>
                 <span>GET DIRECTIONS</span>
               </a>
               <a
                 href="tel:+919821611116"
-                class="inline-flex items-center justify-center gap-2 rounded-full border border-forest px-6 py-3 text-sm font-semibold text-forest transition-all hover:bg-forest/5"
+                class="w-full sm:w-auto min-h-[48px] inline-flex items-center justify-center gap-2 rounded-full border border-forest px-6 py-3 text-sm font-semibold text-forest transition-all hover:bg-forest/5"
               >
-                <i data-lucide="phone" class="h-4 w-4" aria-hidden="true"></i>
+                <i data-lucide="phone" class="h-4 w-4 shrink-0" aria-hidden="true"></i>
                 <span>CALL RESTAURANT</span>
               </a>
             </div>
           </div>
 
           <!-- Google Maps Embed -->
-          <div class="reveal-on-scroll lg:col-span-7">
+          <div class="reveal-on-scroll min-w-0 lg:col-span-7">
             <div class="overflow-hidden rounded-xl border border-sand bg-white p-2 shadow-soft">
               <div class="aspect-[16/10] w-full overflow-hidden rounded-lg bg-sand/40">
                 <iframe
@@ -1105,7 +1106,7 @@
         </div>
 
         <!-- Contact Details -->
-        <div>
+        <div class="min-w-0">
           <h3 class="font-serif text-base font-bold text-gold-light">Contact</h3>
           <ul class="mt-3.5 space-y-2.5 text-sm text-cream/85">
             <li class="flex items-center gap-2">
@@ -1118,7 +1119,7 @@
             </li>
             <li class="flex items-start gap-2">
               <i data-lucide="map-pin" class="mt-0.5 h-4 w-4 shrink-0 text-gold-light" aria-hidden="true"></i>
-              <span>Fir Milenge, Rajanpara flamingos 102, Pice of mind center, Link Rd, Malad, Jai Janata Nagar, Malad West, Mumbai, Maharashtra 400064.</span>
+              <span class="break-words">Fir Milenge, Rajanpara flamingos 102, Pice of mind center, Link Rd, Malad, Jai Janata Nagar, Malad West, Mumbai, Maharashtra 400064.</span>
             </li>
             <li class="flex items-center gap-2">
               <i data-lucide="clock" class="h-4 w-4 shrink-0 text-gold-light" aria-hidden="true"></i>
@@ -1159,7 +1160,7 @@
        ======================================================================== -->
   <nav
     aria-label="Mobile Quick Actions"
-    class="mobile-action-bar fixed bottom-0 left-0 right-0 z-40 grid grid-cols-3 border-t border-sand bg-cream/98 shadow-[0_-6px_24px_rgba(27,67,50,0.10)] backdrop-blur-md md:hidden"
+    class="mobile-action-bar fixed bottom-0 left-0 right-0 z-40 grid grid-cols-3 border-t border-sand bg-cream/[0.98] shadow-[0_-6px_24px_rgba(27,67,50,0.10)] backdrop-blur-md md:hidden"
   >
     <a
       href="tel:+919821611116"
@@ -1195,7 +1196,7 @@
     id="toast-notification"
     role="status"
     aria-live="polite"
-    class="pointer-events-none fixed bottom-20 right-4 left-4 z-50 mx-auto max-w-md translate-y-4 opacity-0 transition-all duration-300 md:bottom-6 md:left-auto"
+    class="pointer-events-none fixed bottom-24 right-4 left-4 z-50 mx-auto max-w-md translate-y-4 opacity-0 transition-all duration-300 md:bottom-6 md:left-auto"
   >
     <div class="pointer-events-auto flex items-start gap-3 rounded-xl border border-gold/50 bg-forest-dark px-4 py-3.5 text-white shadow-xl">
       <i data-lucide="check-circle-2" class="mt-0.5 h-5 w-5 shrink-0 text-gold-light" aria-hidden="true"></i>
@@ -1505,7 +1506,7 @@
           )}`;
 
           return `
-            <article class="group flex flex-col overflow-hidden rounded-xl border border-sand bg-white shadow-card transition-all duration-300 hover:-translate-y-1 hover:border-gold/60 hover:shadow-soft">
+            <article class="group flex min-w-0 flex-col overflow-hidden rounded-xl border border-sand bg-white shadow-card transition-all duration-300 hover:-translate-y-1 hover:border-gold/60 hover:shadow-soft">
               <div class="relative aspect-[16/10] w-full overflow-hidden bg-sand/35">
                 <img
                   src="${dish.image}"
