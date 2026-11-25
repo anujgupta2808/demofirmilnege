@@ -1,0 +1,1892 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fir Milenge | Pure Veg &amp; Jain-Friendly Family Restaurant — Malad West, Mumbai</title>
+  <meta name="description" content="Fir Milenge is Malad West's pure vegetarian and Jain-friendly multi-cuisine family restaurant opposite Mithchowki Metro Station. Book your table or private celebration directly on WhatsApp." />
+  <meta name="theme-color" content="#1B4332" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Fir Milenge | Pure Veg &amp; Jain Family Dining — Malad West, Mumbai" />
+  <meta property="og:description" content="100% Pure Vegetarian, Jain-friendly North Indian, Oriental, Continental &amp; Fusion dining opposite Mithchowki Metro Station." />
+  <meta property="og:type" content="website" />
+
+  <!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream: '#FDFBF7',
+            forest: {
+              DEFAULT: '#1B4332',
+              light: '#2D6A4F',
+              dark: '#132F23'
+            },
+            gold: {
+              DEFAULT: '#C59B27',
+              light: '#D9B44A',
+              dark: '#A47E18'
+            },
+            ink: {
+              DEFAULT: '#1F2937',
+              muted: '#4B5563'
+            },
+            sand: '#EAE4D7'
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif']
+          },
+          boxShadow: {
+            soft: '0 10px 30px -10px rgba(27, 67, 50, 0.10)',
+            card: '0 6px 24px -6px rgba(31, 41, 55, 0.08)',
+            nav: '0 8px 28px -8px rgba(27, 67, 50, 0.14)'
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Lucide Icons via CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    /* ==========================================================================
+       CSS VARIABLES & BASE THEME — WARM MODERN HERITAGE
+       ========================================================================== */
+    :root {
+      --bg-main: #FDFBF7;
+      --green-primary: #1B4332;
+      --green-secondary: #2D6A4F;
+      --gold-warm: #C59B27;
+      --card-white: #FFFFFF;
+      --text-main: #1F2937;
+      --text-secondary: #4B5563;
+      --border-warm: #EAE4D7;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 88px;
+    }
+
+    body {
+      background-color: var(--bg-main);
+      color: var(--text-main);
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, .font-editorial {
+      font-family: 'Playfair Display', Georgia, serif;
+    }
+
+    /* Accessible Focus Rings */
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible,
+    select:focus-visible,
+    textarea:focus-visible {
+      outline: 2px solid var(--gold-warm);
+      outline-offset: 2px;
+    }
+
+    /* Glassmorphism Sticky Header Transitions */
+    .site-nav {
+      background-color: rgba(253, 251, 247, 0.84);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(234, 228, 215, 0.65);
+      transition: background-color 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+    }
+
+    .site-nav.is-scrolled {
+      background-color: rgba(253, 251, 247, 0.98);
+      border-bottom-color: var(--border-warm);
+      box-shadow: 0 8px 28px -8px rgba(27, 67, 50, 0.14);
+    }
+
+    /* Subtle Gold Hairline Divider */
+    .gold-divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(197, 155, 39, 0.55), transparent);
+    }
+
+    /* Horizontal Pill Scrollbar Hide (Mobile Category Bar) */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    /* Hero Subtle Entrance */
+    @keyframes fadeUpIn {
+      from {
+        opacity: 0;
+        transform: translateY(16px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .hero-animate {
+      animation: fadeUpIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+    }
+    .hero-delay-1 { animation-delay: 0.08s; }
+    .hero-delay-2 { animation-delay: 0.16s; }
+    .hero-delay-3 { animation-delay: 0.24s; }
+    .hero-delay-4 { animation-delay: 0.32s; }
+
+    /* Reveal on Scroll */
+    .reveal-on-scroll {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1), transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .reveal-on-scroll.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Reservation Form Highlight Pulse when triggered by Party CTA */
+    @keyframes formGlow {
+      0% { box-shadow: 0 0 0 0 rgba(197, 155, 39, 0.5); }
+      70% { box-shadow: 0 0 0 12px rgba(197, 155, 39, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(197, 155, 39, 0); }
+    }
+    .form-highlight {
+      animation: formGlow 1.2s ease-out;
+    }
+
+    /* Mobile Bottom Safe-Area Bar */
+    .mobile-action-bar {
+      padding-bottom: max(0.5rem, env(safe-area-inset-bottom));
+    }
+
+    /* Respect Reduced Motion */
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+      .hero-animate,
+      .reveal-on-scroll,
+      .form-highlight {
+        animation: none !important;
+        transition: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-cream text-ink pb-20 md:pb-0 selection:bg-forest selection:text-white">
+  <!-- Skip to Main Content for Keyboard/Screen Reader Users -->
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:rounded-lg focus:bg-forest focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-white">
+    Skip to main content
+  </a>
+
+  <!-- ========================================================================
+       SECTION 01 – STICKY NAVIGATION
+       ======================================================================== -->
+  <header id="navbar" class="site-nav sticky top-0 z-50 w-full">
+    <div class="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-3 sm:px-6 lg:px-8">
+      <!-- Left: Brand Wordmark + Leaf Emblem + Trust Pill -->
+      <div class="flex items-center gap-3 min-w-0">
+        <a href="#home" class="group flex items-center gap-2.5 shrink-0" aria-label="Fir Milenge Home">
+          <span class="flex h-9 w-9 items-center justify-center rounded-full bg-forest/10 border border-forest/15 transition-colors group-hover:bg-forest/15" aria-hidden="true">
+            <!-- Custom Leaf-Inspired Vegetarian Brand Symbol -->
+            <svg class="h-5 w-5 text-forest" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" fill="#2D6A4F" fill-opacity="0.18"/>
+              <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/>
+              <circle cx="15.5" cy="7.5" r="1.2" fill="#C59B27" stroke="none"/>
+            </svg>
+          </span>
+          <div class="flex flex-col leading-none">
+            <span class="font-serif text-lg sm:text-xl font-bold tracking-wide text-forest">FIR MILENGE</span>
+            <span class="text-[10px] font-semibold uppercase tracking-[0.18em] text-gold-dark hidden sm:block">Malad West • Mumbai</span>
+          </div>
+        </a>
+
+        <span class="hidden xl:inline-flex items-center gap-1.5 rounded-full border border-forest/20 bg-forest/5 px-3 py-1 text-xs font-semibold text-forest">
+          <span class="h-2 w-2 rounded-full bg-forest-light" aria-hidden="true"></span>
+          100% Pure Veg &amp; Jain
+        </span>
+      </div>
+
+      <!-- Center: Desktop Navigation Links -->
+      <nav class="hidden lg:flex items-center gap-7" aria-label="Primary Navigation">
+        <a href="#home" class="nav-link text-sm font-semibold text-ink hover:text-forest transition-colors relative py-1">Home</a>
+        <a href="#menu" class="nav-link text-sm font-semibold text-ink hover:text-forest transition-colors relative py-1">Our Menu</a>
+        <a href="#parties" class="nav-link text-sm font-semibold text-ink hover:text-forest transition-colors relative py-1">Private Parties</a>
+        <a href="#reviews" class="nav-link text-sm font-semibold text-ink hover:text-forest transition-colors relative py-1">Reviews</a>
+        <a href="#location" class="nav-link text-sm font-semibold text-ink hover:text-forest transition-colors relative py-1">Location</a>
+      </nav>
+
+      <!-- Right: Primary CTA + Mobile Controls -->
+      <div class="flex items-center gap-2 sm:gap-3 shrink-0">
+        <a href="#reserve" class="inline-flex items-center gap-2 rounded-full bg-forest px-3.5 py-2 sm:px-5 sm:py-2.5 text-xs sm:text-sm font-semibold tracking-wide text-white shadow-sm transition-all hover:bg-forest-light hover:shadow-md">
+          <i data-lucide="message-circle" class="h-4 w-4 text-gold-light" aria-hidden="true"></i>
+          <span>BOOK A TABLE</span>
+        </a>
+
+        <button
+          id="mobile-menu-btn"
+          type="button"
+          class="inline-flex lg:hidden h-10 w-10 items-center justify-center rounded-full border border-sand bg-white text-forest transition-colors hover:bg-forest/5"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu-panel"
+        >
+          <i id="mobile-menu-icon-open" data-lucide="menu" class="h-5 w-5" aria-hidden="true"></i>
+          <i id="mobile-menu-icon-close" data-lucide="x" class="h-5 w-5 hidden" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu-panel" class="hidden lg:hidden border-t border-sand bg-cream/98 backdrop-blur-md">
+      <nav class="mx-auto flex max-w-7xl flex-col px-4 py-4 space-y-1" aria-label="Mobile Navigation">
+        <div class="mb-2 flex items-center justify-between rounded-lg bg-forest/5 px-3 py-2 text-xs font-semibold text-forest">
+          <span class="inline-flex items-center gap-1.5">
+            <span class="h-2 w-2 rounded-full bg-forest-light" aria-hidden="true"></span>
+            100% Pure Veg &amp; Jain-Friendly
+          </span>
+          <span class="text-ink-muted">12 PM – 11:30 PM</span>
+        </div>
+        <a href="#home" class="mobile-nav-link rounded-lg px-3 py-2.5 text-sm font-semibold text-ink hover:bg-forest/5 hover:text-forest">Home</a>
+        <a href="#menu" class="mobile-nav-link rounded-lg px-3 py-2.5 text-sm font-semibold text-ink hover:bg-forest/5 hover:text-forest">Our Menu</a>
+        <a href="#parties" class="mobile-nav-link rounded-lg px-3 py-2.5 text-sm font-semibold text-ink hover:bg-forest/5 hover:text-forest">Private Parties</a>
+        <a href="#reviews" class="mobile-nav-link rounded-lg px-3 py-2.5 text-sm font-semibold text-ink hover:bg-forest/5 hover:text-forest">Reviews</a>
+        <a href="#location" class="mobile-nav-link rounded-lg px-3 py-2.5 text-sm font-semibold text-ink hover:bg-forest/5 hover:text-forest">Location</a>
+        <div class="pt-2 flex gap-2">
+          <a href="tel:+919821611116" class="flex-1 inline-flex items-center justify-center gap-2 rounded-lg border border-forest px-3 py-2.5 text-xs font-semibold text-forest">
+            <i data-lucide="phone" class="h-4 w-4" aria-hidden="true"></i>
+            Call Now
+          </a>
+          <a href="#reserve" class="mobile-nav-link flex-1 inline-flex items-center justify-center gap-2 rounded-lg bg-forest px-3 py-2.5 text-xs font-semibold text-white">
+            <i data-lucide="calendar-check" class="h-4 w-4 text-gold-light" aria-hidden="true"></i>
+            Book Table
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- ========================================================================
+         SECTION 02 – PREMIUM HERO SECTION
+         ======================================================================== -->
+    <section id="home" class="relative overflow-hidden bg-forest-dark text-white">
+      <!-- Background Photography -->
+      <div class="absolute inset-0 z-0">
+        <img
+          src="https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?auto=format&fit=crop&w=1800&q=85"
+          alt="Rich spread of pure vegetarian Indian curries, aromatic rice, and freshly baked naan served at Fir Milenge"
+          class="h-full w-full object-cover object-center"
+          loading="eager"
+          fetchpriority="high"
+          onerror="handleImageError(this, 'Pure Vegetarian Feast — Fir Milenge')"
+        />
+        <!-- Forest-green overlay ~82% opacity -->
+        <div class="absolute inset-0 bg-gradient-to-r from-[#1B4332]/95 via-[#1B4332]/85 to-[#1B4332]/75"></div>
+      </div>
+
+      <!-- Hero Content -->
+      <div class="relative z-10 mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8 lg:py-28">
+        <div class="max-w-3xl">
+          <div class="hero-animate inline-flex items-center gap-2 rounded-full border border-gold/50 bg-forest-dark/60 px-4 py-1.5 text-[11px] sm:text-xs font-semibold uppercase tracking-[0.16em] text-gold-light backdrop-blur-sm">
+            <span class="h-1.5 w-1.5 rounded-full bg-gold" aria-hidden="true"></span>
+            MALAD WEST'S PURE VEGETARIAN DINING DESTINATION
+          </div>
+
+          <h1 class="hero-animate hero-delay-1 mt-6 font-serif text-3xl font-bold leading-[1.14] tracking-tight text-white sm:text-5xl lg:text-[3.4rem]">
+            Mith Chowky's Favourite Pure Veg &amp; Jain Family Dining
+          </h1>
+
+          <p class="hero-animate hero-delay-2 mt-5 max-w-2xl text-base leading-relaxed text-cream/90 sm:text-lg">
+            Good food, warm hospitality and memorable family moments. Discover signature vegetarian flavours, Jain-friendly preparations and comfortable family dining at Fir Milenge.
+          </p>
+
+          <div class="hero-animate hero-delay-3 mt-8 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
+            <a
+              href="#reserve"
+              class="inline-flex items-center justify-center gap-2.5 rounded-full bg-gold px-7 py-3.5 text-sm font-bold tracking-wide text-forest-dark shadow-lg transition-all hover:bg-gold-light hover:-translate-y-0.5"
+            >
+              <i data-lucide="message-circle" class="h-4 w-4" aria-hidden="true"></i>
+              <span>RESERVE YOUR TABLE</span>
+            </a>
+            <a
+              href="#menu"
+              class="inline-flex items-center justify-center gap-2.5 rounded-full border border-white/60 bg-white/10 px-7 py-3.5 text-sm font-semibold tracking-wide text-white backdrop-blur-sm transition-all hover:border-gold-light hover:bg-white/15"
+            >
+              <span>EXPLORE OUR MENU</span>
+              <i data-lucide="arrow-right" class="h-4 w-4" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Visual Trust Strip -->
+      <div class="relative z-10 border-t border-gold/25 bg-[#143326]/95 backdrop-blur-sm">
+        <div class="mx-auto grid max-w-7xl grid-cols-1 divide-y divide-white/10 px-4 sm:grid-cols-2 sm:divide-y-0 lg:grid-cols-4 lg:divide-x lg:divide-white/15 sm:px-6 lg:px-8">
+          <div class="flex items-center gap-3 py-3.5 lg:px-4 lg:first:pl-0">
+            <i data-lucide="leaf" class="h-5 w-5 shrink-0 text-gold-light" aria-hidden="true"></i>
+            <span class="text-xs sm:text-sm font-medium text-cream">100% Pure Vegetarian.</span>
+          </div>
+          <div class="flex items-center gap-3 py-3.5 lg:px-5">
+            <i data-lucide="check-circle-2" class="h-5 w-5 shrink-0 text-gold-light" aria-hidden="true"></i>
+            <span class="text-xs sm:text-sm font-medium text-cream">Jain-Friendly Preparations.</span>
+          </div>
+          <div class="flex items-center gap-3 py-3.5 lg:px-5">
+            <i data-lucide="train-front" class="h-5 w-5 shrink-0 text-gold-light" aria-hidden="true"></i>
+            <span class="text-xs sm:text-sm font-medium text-cream">Opposite Mithchowki Metro.</span>
+          </div>
+          <div class="flex items-center gap-3 py-3.5 lg:px-5 lg:last:pr-0">
+            <i data-lucide="users" class="h-5 w-5 shrink-0 text-gold-light" aria-hidden="true"></i>
+            <span class="text-xs sm:text-sm font-medium text-cream">Private Dining for 20–25 Guests.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         SECTION 03 – BRAND INTRODUCTION
+         ======================================================================== -->
+    <section id="about" class="py-16 sm:py-22 lg:py-24 bg-cream">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 items-center gap-10 lg:grid-cols-12 lg:gap-14">
+          <!-- Left: Restaurant Dining Image -->
+          <div class="reveal-on-scroll lg:col-span-6">
+            <div class="relative overflow-hidden rounded-xl border border-sand bg-white p-2.5 shadow-soft">
+              <div class="aspect-[16/11] w-full overflow-hidden rounded-lg bg-sand/40">
+                <img
+                  src="https://images.unsplash.com/photo-1577065362004-d1cf34a6063f?auto=format&fit=crop&w=1200&q=80"
+                  alt="Warm, inviting family dining room at Fir Milenge with pendant lighting and comfortable seating"
+                  class="h-full w-full object-cover transition-transform duration-500 hover:scale-[1.03]"
+                  loading="lazy"
+                  width="1200"
+                  height="825"
+                  onerror="handleImageError(this, 'Fir Milenge Family Dining Interior')"
+                />
+              </div>
+              <div class="mt-2.5 flex items-center justify-between px-1.5 py-1 text-xs text-ink-muted">
+                <span class="font-semibold text-forest">Rajanpara flamingos 102 • Link Rd, Malad West</span>
+                <span>12:00 PM – 11:30 PM Daily</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Editorial Storytelling -->
+          <div class="reveal-on-scroll lg:col-span-6">
+            <span class="text-xs font-bold uppercase tracking-[0.2em] text-gold-dark">Our Philosophy</span>
+            <h2 class="mt-2 font-serif text-3xl font-bold leading-snug text-forest sm:text-4xl">
+              More Than Just a Meal. <span class="italic font-medium text-forest-light">A Place to Come Together.</span>
+            </h2>
+            <div class="mt-4 h-0.5 w-16 bg-gold" aria-hidden="true"></div>
+
+            <p class="mt-5 text-base leading-relaxed text-ink-muted">
+              At Fir Milenge, every meal is an opportunity to reconnect. From comforting Indian classics to exciting fusion creations, we bring people together through delicious vegetarian food and thoughtful hospitality.
+            </p>
+
+            <ul class="mt-7 grid grid-cols-1 gap-3.5 sm:grid-cols-2">
+              <li class="flex items-center gap-3 rounded-lg border border-sand bg-white px-4 py-3 shadow-sm">
+                <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-forest/10 text-forest">
+                  <i data-lucide="utensils" class="h-4 w-4" aria-hidden="true"></i>
+                </span>
+                <span class="text-sm font-semibold text-ink">Pure Vegetarian Cuisine.</span>
+              </li>
+              <li class="flex items-center gap-3 rounded-lg border border-sand bg-white px-4 py-3 shadow-sm">
+                <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-forest/10 text-forest">
+                  <i data-lucide="sparkles" class="h-4 w-4" aria-hidden="true"></i>
+                </span>
+                <span class="text-sm font-semibold text-ink">Jain-Friendly Customization.</span>
+              </li>
+              <li class="flex items-center gap-3 rounded-lg border border-sand bg-white px-4 py-3 shadow-sm">
+                <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-forest/10 text-forest">
+                  <i data-lucide="home" class="h-4 w-4" aria-hidden="true"></i>
+                </span>
+                <span class="text-sm font-semibold text-ink">Family-Friendly Ambience.</span>
+              </li>
+              <li class="flex items-center gap-3 rounded-lg border border-sand bg-white px-4 py-3 shadow-sm">
+                <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-forest/10 text-forest">
+                  <i data-lucide="users" class="h-4 w-4" aria-hidden="true"></i>
+                </span>
+                <span class="text-sm font-semibold text-ink">Private Group Dining.</span>
+              </li>
+            </ul>
+
+            <div class="mt-8">
+              <a href="#menu" class="inline-flex items-center gap-2 rounded-full bg-forest px-6 py-3 text-xs sm:text-sm font-semibold tracking-wider text-white transition-all hover:bg-forest-light hover:shadow-md">
+                <span>DISCOVER FIR MILENGE</span>
+                <i data-lucide="arrow-right" class="h-4 w-4 text-gold-light" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="gold-divider mx-auto max-w-6xl" aria-hidden="true"></div>
+
+    <!-- ========================================================================
+         SECTION 04 – INTERACTIVE FOOD MENU
+         ======================================================================== -->
+    <section id="menu" class="py-16 sm:py-20 lg:py-24 bg-cream">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <!-- Header -->
+        <div class="reveal-on-scroll mx-auto max-w-2xl text-center">
+          <span class="text-xs font-bold uppercase tracking-[0.2em] text-gold-dark">Curated Highlights</span>
+          <h2 class="mt-2 font-serif text-3xl font-bold text-forest sm:text-4xl">
+            Discover Something Delicious
+          </h2>
+          <p class="mt-3 text-sm sm:text-base text-ink-muted">
+            From comforting Indian favourites to exciting fusion creations, find your next favourite dish.
+          </p>
+        </div>
+
+        <!-- Menu Filter Bar -->
+        <div class="mt-10 rounded-xl border border-sand bg-white p-4 sm:p-5 shadow-card">
+          <div class="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+            <!-- Horizontally Scrollable Category Pills -->
+            <div class="flex items-center gap-2 overflow-x-auto no-scrollbar pb-1 lg:pb-0" role="group" aria-label="Menu Categories">
+              <button type="button" data-category="All Dishes" aria-pressed="true" class="category-btn shrink-0 rounded-full px-4 py-2 text-xs sm:text-sm font-semibold transition-all bg-forest text-white">
+                All Dishes
+              </button>
+              <button type="button" data-category="Chef's Signatures" aria-pressed="false" class="category-btn shrink-0 rounded-full border border-sand bg-cream px-4 py-2 text-xs sm:text-sm font-semibold text-ink transition-all hover:border-forest/40 hover:text-forest">
+                Chef's Signatures
+              </button>
+              <button type="button" data-category="North Indian" aria-pressed="false" class="category-btn shrink-0 rounded-full border border-sand bg-cream px-4 py-2 text-xs sm:text-sm font-semibold text-ink transition-all hover:border-forest/40 hover:text-forest">
+                North Indian
+              </button>
+              <button type="button" data-category="Oriental & Fusion" aria-pressed="false" class="category-btn shrink-0 rounded-full border border-sand bg-cream px-4 py-2 text-xs sm:text-sm font-semibold text-ink transition-all hover:border-forest/40 hover:text-forest">
+                Oriental &amp; Fusion
+              </button>
+              <button type="button" data-category="Continental & Pizza" aria-pressed="false" class="category-btn shrink-0 rounded-full border border-sand bg-cream px-4 py-2 text-xs sm:text-sm font-semibold text-ink transition-all hover:border-forest/40 hover:text-forest">
+                Continental &amp; Pizza
+              </button>
+            </div>
+
+            <!-- Jain Toggle & Search Input -->
+            <div class="flex flex-col gap-3 sm:flex-row sm:items-center">
+              <!-- Jain-Only Toggle -->
+              <button
+                id="jain-toggle-btn"
+                type="button"
+                role="switch"
+                aria-checked="false"
+                class="inline-flex items-center justify-between gap-3 rounded-full border border-forest/25 bg-forest/5 px-3.5 py-2 text-xs font-bold tracking-wide text-forest transition-all hover:bg-forest/10"
+              >
+                <span class="inline-flex items-center gap-2">
+                  <span id="jain-switch-track" class="relative inline-flex h-5 w-9 shrink-0 items-center rounded-full bg-gray-300 transition-colors">
+                    <span id="jain-switch-thumb" class="inline-block h-3.5 w-3.5 translate-x-1 rounded-full bg-white shadow transition-transform"></span>
+                  </span>
+                  <span>JAIN OPTIONS ONLY</span>
+                </span>
+                <span class="rounded-full bg-forest px-2 py-0.5 text-[10px] font-semibold text-white">Jain</span>
+              </button>
+
+              <!-- Search Input -->
+              <div class="relative flex-1 sm:w-64">
+                <label for="menu-search" class="sr-only">Search your favourite dish</label>
+                <i data-lucide="search" class="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-ink-muted" aria-hidden="true"></i>
+                <input
+                  id="menu-search"
+                  type="search"
+                  placeholder="Search your favourite dish..."
+                  class="w-full rounded-full border border-sand bg-cream py-2 pl-10 pr-4 text-sm text-ink placeholder:text-ink-muted/75 focus:border-forest focus:bg-white focus:outline-none"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Live Result Counter & Quick Reset -->
+          <div class="mt-3.5 flex flex-wrap items-center justify-between gap-2 border-t border-sand/80 pt-3 text-xs text-ink-muted">
+            <p id="dish-count" aria-live="polite" class="font-semibold text-forest">Showing 12 dishes.</p>
+            <button id="quick-reset-btn" type="button" class="hidden font-semibold text-gold-dark underline underline-offset-2 hover:text-forest">
+              Reset filters
+            </button>
+          </div>
+        </div>
+
+        <!-- Menu Cards Grid -->
+        <div id="menu-grid" class="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          <!-- Populated dynamically by renderMenu() -->
+        </div>
+
+        <!-- Empty State -->
+        <div id="menu-empty-state" class="hidden mt-8 rounded-xl border border-sand bg-white px-6 py-12 text-center shadow-card">
+          <div class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-forest/10 text-forest">
+            <i data-lucide="search-x" class="h-6 w-6" aria-hidden="true"></i>
+          </div>
+          <h3 class="mt-4 font-serif text-xl font-bold text-forest">No matching dishes found</h3>
+          <p class="mt-1.5 text-sm text-ink-muted">Try adjusting your category, turning off the Jain-only filter, or clearing your search.</p>
+          <button
+            id="empty-reset-btn"
+            type="button"
+            class="mt-5 inline-flex items-center gap-2 rounded-full bg-forest px-5 py-2.5 text-xs font-semibold text-white hover:bg-forest-light"
+          >
+            <i data-lucide="rotate-ccw" class="h-3.5 w-3.5" aria-hidden="true"></i>
+            <span>Reset All Filters</span>
+          </button>
+        </div>
+
+        <!-- Menu Footer Note + CTA -->
+        <div class="mt-10 flex flex-col items-center justify-between gap-4 rounded-xl border border-sand bg-white/80 px-5 py-4 text-center sm:flex-row sm:text-left">
+          <div class="flex items-start gap-3">
+            <i data-lucide="info" class="mt-0.5 h-5 w-5 shrink-0 text-forest" aria-hidden="true"></i>
+            <p class="text-xs sm:text-sm leading-relaxed text-ink-muted">
+              <strong class="font-semibold text-forest">Showing curated highlights from our full 16-page menu. Ask our captain for custom Jain/Swaminarayan preparations.</strong>
+              Preparation details may vary by dish; please confirm specific dietary preferences with our team before ordering.
+            </p>
+          </div>
+          <a href="#reserve" class="shrink-0 inline-flex items-center gap-2 rounded-full border border-forest px-4 py-2 text-xs font-semibold text-forest transition-colors hover:bg-forest hover:text-white">
+            <span>Book a Table</span>
+            <i data-lucide="arrow-right" class="h-3.5 w-3.5" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         SECTION 05 – PRIVATE PARTIES & CELEBRATIONS
+         ======================================================================== -->
+    <section id="parties" class="relative overflow-hidden bg-forest-dark py-16 sm:py-22 lg:py-24 text-white">
+      <!-- Celebration Backdrop -->
+      <div class="absolute inset-0 z-0">
+        <img
+          src="https://images.unsplash.com/photo-1521119615060-c32d655ba3b9?auto=format&fit=crop&w=1600&q=80"
+          alt="Warm candlelit celebration cake and festive table setting at Fir Milenge private dining area"
+          class="h-full w-full object-cover object-center"
+          loading="lazy"
+          onerror="handleImageError(this, 'Private Dining & Celebrations')"
+        />
+        <div class="absolute inset-0 bg-gradient-to-br from-[#132F23]/94 via-[#1B4332]/88 to-[#132F23]/92"></div>
+      </div>
+
+      <div class="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="reveal-on-scroll mx-auto max-w-3xl text-center">
+          <div class="inline-flex items-center gap-2 rounded-full border border-gold/60 bg-forest-dark/70 px-4 py-1.5 text-xs font-semibold text-gold-light">
+            <i data-lucide="party-popper" class="h-4 w-4" aria-hidden="true"></i>
+            <span>Dedicated Private Dining Space for 20–25 Guests</span>
+          </div>
+
+          <h2 class="mt-5 font-serif text-3xl font-bold text-white sm:text-4xl lg:text-[2.75rem]">
+            Make Your Celebrations More Memorable
+          </h2>
+          <p class="mt-2 font-serif text-lg italic text-gold-light sm:text-xl">
+            Your Special Moments Deserve a Special Place.
+          </p>
+
+          <p class="mt-4 text-xs sm:text-sm font-medium tracking-wide text-cream/85">
+            Ideal for: Birthday Celebrations &bull; Anniversaries &bull; Kitty Parties &bull; Family Get-Togethers &bull; Small Corporate Gatherings
+          </p>
+        </div>
+
+        <!-- 3 Feature Cards -->
+        <div class="reveal-on-scroll mt-10 grid grid-cols-1 gap-5 md:grid-cols-3">
+          <div class="rounded-xl border border-gold/35 bg-forest-dark/75 p-6 backdrop-blur-sm transition-transform hover:-translate-y-1">
+            <div class="flex h-11 w-11 items-center justify-center rounded-lg bg-gold/15 text-gold-light">
+              <i data-lucide="clipboard-list" class="h-5 w-5" aria-hidden="true"></i>
+            </div>
+            <h3 class="mt-4 font-serif text-lg font-bold tracking-wide text-white">CUSTOM MENUS</h3>
+            <p class="mt-2 text-sm leading-relaxed text-cream/85">
+              Multi-cuisine buffet and platter options with Jain-friendly customization.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-gold/35 bg-forest-dark/75 p-6 backdrop-blur-sm transition-transform hover:-translate-y-1">
+            <div class="flex h-11 w-11 items-center justify-center rounded-lg bg-gold/15 text-gold-light">
+              <i data-lucide="users-round" class="h-5 w-5" aria-hidden="true"></i>
+            </div>
+            <h3 class="mt-4 font-serif text-lg font-bold tracking-wide text-white">DEDICATED SERVICE</h3>
+            <p class="mt-2 text-sm leading-relaxed text-cream/85">
+              Attentive service support for a comfortable group dining experience.
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-gold/35 bg-forest-dark/75 p-6 backdrop-blur-sm transition-transform hover:-translate-y-1">
+            <div class="flex h-11 w-11 items-center justify-center rounded-lg bg-gold/15 text-gold-light">
+              <i data-lucide="gift" class="h-5 w-5" aria-hidden="true"></i>
+            </div>
+            <h3 class="mt-4 font-serif text-lg font-bold tracking-wide text-white">CELEBRATION SUPPORT</h3>
+            <p class="mt-2 text-sm leading-relaxed text-cream/85">
+              Custom decoration coordination for memorable occasions.
+            </p>
+          </div>
+        </div>
+
+        <!-- Primary CTA -->
+        <div class="mt-10 text-center">
+          <button
+            id="party-quote-btn"
+            type="button"
+            class="inline-flex items-center justify-center gap-2.5 rounded-full bg-gold px-7 py-3.5 text-sm font-bold tracking-wide text-forest-dark shadow-lg transition-all hover:bg-gold-light hover:-translate-y-0.5"
+          >
+            <span>REQUEST PARTY PACKAGE QUOTE</span>
+            <i data-lucide="arrow-right" class="h-4 w-4" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         SECTION 06 – DIRECT TABLE RESERVATION
+         ======================================================================== -->
+    <section id="reserve" class="py-16 sm:py-22 lg:py-24 bg-cream">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:items-start lg:gap-12">
+          <!-- Left Column: Restaurant Information -->
+          <div class="reveal-on-scroll lg:col-span-5">
+            <span class="text-xs font-bold uppercase tracking-[0.2em] text-gold-dark">Direct WhatsApp Booking</span>
+            <h2 class="mt-2 font-serif text-3xl font-bold text-forest sm:text-4xl">
+              Your Table Is Waiting.
+            </h2>
+            <p class="mt-3 text-base leading-relaxed text-ink-muted">
+              Skip unnecessary waiting. Share your preferred time and seating arrangement directly with our team.
+            </p>
+
+            <div class="mt-8 space-y-5">
+              <div class="flex items-start gap-4">
+                <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-forest/10 text-forest">
+                  <i data-lucide="clock" class="h-5 w-5" aria-hidden="true"></i>
+                </span>
+                <div>
+                  <p class="text-xs font-bold uppercase tracking-wider text-ink-muted">Opening Hours</p>
+                  <p class="mt-0.5 text-sm sm:text-base font-semibold text-ink">12:00 PM – 11:30 PM Daily</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-forest/10 text-forest">
+                  <i data-lucide="phone" class="h-5 w-5" aria-hidden="true"></i>
+                </span>
+                <div>
+                  <p class="text-xs font-bold uppercase tracking-wider text-ink-muted">Direct Reservations &amp; Takeaway</p>
+                  <p class="mt-0.5 text-sm sm:text-base font-semibold text-ink">
+                    <a href="tel:+919821611116" class="hover:text-forest underline decoration-sand underline-offset-4">+91 98216 11116</a>
+                    <span class="mx-1.5 text-sand">|</span>
+                    <a href="tel:+919619911116" class="hover:text-forest underline decoration-sand underline-offset-4">+91 96199 11116</a>
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-forest/10 text-forest">
+                  <i data-lucide="map-pin" class="h-5 w-5" aria-hidden="true"></i>
+                </span>
+                <div>
+                  <p class="text-xs font-bold uppercase tracking-wider text-ink-muted">Address</p>
+                  <p class="mt-0.5 text-sm leading-relaxed font-medium text-ink">
+                    Fir Milenge, Rajanpara flamingos 102, Pice of mind center, Link Rd, Malad, Jai Janata Nagar, Malad West, Mumbai, Maharashtra 400064.
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-forest/10 text-forest">
+                  <i data-lucide="sprout" class="h-5 w-5" aria-hidden="true"></i>
+                </span>
+                <div>
+                  <p class="text-xs font-bold uppercase tracking-wider text-ink-muted">Vegetarian Dining Assurance</p>
+                  <p class="mt-0.5 text-sm font-medium text-ink">
+                    100% Pure Vegetarian kitchen with dedicated Jain-friendly options on request.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Reservation Form -->
+          <div class="reveal-on-scroll lg:col-span-7">
+            <form
+              id="reservation-form"
+              novalidate
+              class="rounded-xl border border-sand bg-white p-5 sm:p-8 shadow-soft transition-shadow"
+            >
+              <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                <!-- Guest Name -->
+                <div>
+                  <label for="guest-name" class="block text-xs font-bold uppercase tracking-wider text-ink">
+                    Guest Name <span class="text-red-600">*</span>
+                  </label>
+                  <input
+                    id="guest-name"
+                    name="guestName"
+                    type="text"
+                    required
+                    autocomplete="name"
+                    placeholder="Your full name"
+                    class="mt-1.5 w-full rounded-lg border border-sand bg-cream/60 px-3.5 py-2.5 text-sm text-ink placeholder:text-ink-muted/70 focus:border-forest focus:bg-white focus:outline-none"
+                  />
+                  <p id="guest-name-error" class="mt-1 hidden text-xs font-medium text-red-600" role="alert"></p>
+                </div>
+
+                <!-- Mobile Number -->
+                <div>
+                  <label for="guest-phone" class="block text-xs font-bold uppercase tracking-wider text-ink">
+                    Mobile Number <span class="text-red-600">*</span>
+                  </label>
+                  <div class="relative mt-1.5">
+                    <span class="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-xs font-semibold text-ink-muted">+91</span>
+                    <input
+                      id="guest-phone"
+                      name="guestPhone"
+                      type="tel"
+                      inputmode="numeric"
+                      maxlength="10"
+                      required
+                      autocomplete="tel-national"
+                      placeholder="10-digit mobile number"
+                      class="w-full rounded-lg border border-sand bg-cream/60 py-2.5 pl-11 pr-3.5 text-sm text-ink placeholder:text-ink-muted/70 focus:border-forest focus:bg-white focus:outline-none"
+                    />
+                  </div>
+                  <p id="guest-phone-error" class="mt-1 hidden text-xs font-medium text-red-600" role="alert"></p>
+                </div>
+
+                <!-- Preferred Date -->
+                <div>
+                  <label for="preferred-date" class="block text-xs font-bold uppercase tracking-wider text-ink">
+                    Preferred Date <span class="text-red-600">*</span>
+                  </label>
+                  <input
+                    id="preferred-date"
+                    name="preferredDate"
+                    type="date"
+                    required
+                    class="mt-1.5 w-full rounded-lg border border-sand bg-cream/60 px-3.5 py-2.5 text-sm text-ink focus:border-forest focus:bg-white focus:outline-none"
+                  />
+                  <p id="preferred-date-error" class="mt-1 hidden text-xs font-medium text-red-600" role="alert"></p>
+                </div>
+
+                <!-- Preferred Time Slot -->
+                <div>
+                  <label for="time-slot" class="block text-xs font-bold uppercase tracking-wider text-ink">
+                    Preferred Time Slot <span class="text-red-600">*</span>
+                  </label>
+                  <select
+                    id="time-slot"
+                    name="timeSlot"
+                    required
+                    class="mt-1.5 w-full rounded-lg border border-sand bg-cream/60 px-3.5 py-2.5 text-sm text-ink focus:border-forest focus:bg-white focus:outline-none"
+                  >
+                    <option value="Dinner: 7:30 PM – 11:30 PM">Dinner: 7:30 PM – 11:30 PM</option>
+                    <option value="Lunch: 12:30 PM – 3:30 PM">Lunch: 12:30 PM – 3:30 PM</option>
+                  </select>
+                </div>
+
+                <!-- Number of Guests -->
+                <div>
+                  <label for="guest-count" class="block text-xs font-bold uppercase tracking-wider text-ink">
+                    Number of Guests <span class="text-red-600">*</span>
+                  </label>
+                  <select
+                    id="guest-count"
+                    name="guestCount"
+                    required
+                    class="mt-1.5 w-full rounded-lg border border-sand bg-cream/60 px-3.5 py-2.5 text-sm text-ink focus:border-forest focus:bg-white focus:outline-none"
+                  >
+                    <option value="2 Guests">2 Guests</option>
+                    <option value="4 Guests">4 Guests</option>
+                    <option value="6 Guests">6 Guests</option>
+                    <option value="8 Guests">8 Guests</option>
+                    <option value="10–15 Guests">10–15 Guests</option>
+                    <option value="20–25 Private Party">20–25 Private Party</option>
+                  </select>
+                </div>
+
+                <!-- Seating Preference -->
+                <div>
+                  <label for="seating-pref" class="block text-xs font-bold uppercase tracking-wider text-ink">
+                    Seating Preference
+                  </label>
+                  <select
+                    id="seating-pref"
+                    name="seatingPreference"
+                    class="mt-1.5 w-full rounded-lg border border-sand bg-cream/60 px-3.5 py-2.5 text-sm text-ink focus:border-forest focus:bg-white focus:outline-none"
+                  >
+                    <option value="Standard Dining">Standard Dining</option>
+                    <option value="Quiet Corner / Family Booth">Quiet Corner / Family Booth</option>
+                    <option value="Private Party Section (20–25 Pax)">Private Party Section (20–25 Pax)</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Jain Dietary Checkbox -->
+              <div class="mt-4">
+                <label class="inline-flex cursor-pointer items-center gap-2.5 rounded-lg border border-forest/20 bg-forest/5 px-3.5 py-2.5 text-sm font-semibold text-forest">
+                  <input
+                    id="jain-requirement"
+                    name="jainRequirement"
+                    type="checkbox"
+                    class="h-4 w-4 rounded border-forest text-forest focus:ring-gold"
+                  />
+                  <span>Require Jain Food Preparations.</span>
+                </label>
+              </div>
+
+              <!-- Additional Notes -->
+              <div class="mt-4">
+                <label for="additional-notes" class="block text-xs font-bold uppercase tracking-wider text-ink">
+                  Additional Notes <span class="font-normal text-ink-muted">(Optional)</span>
+                </label>
+                <textarea
+                  id="additional-notes"
+                  name="additionalNotes"
+                  rows="2"
+                  placeholder="Celebration occasion, high chair request, Swaminarayan preferences, or custom timing..."
+                  class="mt-1.5 w-full rounded-lg border border-sand bg-cream/60 px-3.5 py-2.5 text-sm text-ink placeholder:text-ink-muted/70 focus:border-forest focus:bg-white focus:outline-none"
+                ></textarea>
+              </div>
+
+              <!-- Submit Button & Honest Confirmation Clarification -->
+              <div class="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                <p class="text-xs text-ink-muted">
+                  Sends a pre-filled booking request via WhatsApp. Table availability is confirmed by our restaurant host.
+                </p>
+                <button
+                  type="submit"
+                  class="shrink-0 inline-flex items-center justify-center gap-2.5 rounded-full bg-forest px-7 py-3.5 text-sm font-bold tracking-wide text-white shadow-md transition-all hover:bg-forest-light hover:shadow-lg"
+                >
+                  <i data-lucide="message-circle" class="h-4 w-4 text-gold-light" aria-hidden="true"></i>
+                  <span>CONFIRM VIA WHATSAPP</span>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="gold-divider mx-auto max-w-6xl" aria-hidden="true"></div>
+
+    <!-- ========================================================================
+         SECTION 07 – CUSTOMER REVIEWS (ILLUSTRATIVE SAMPLE TESTIMONIALS)
+         ======================================================================== -->
+    <section id="reviews" class="py-16 sm:py-20 lg:py-24 bg-cream">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="reveal-on-scroll mx-auto max-w-2xl text-center">
+          <span class="inline-flex items-center gap-1.5 rounded-full border border-sand bg-white px-3.5 py-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-ink-muted">
+            Illustrative Guest Testimonials (Demo Sample)
+          </span>
+          <h2 class="mt-3 font-serif text-3xl font-bold text-forest sm:text-4xl">
+            Good Food. Happy Moments. Beautiful Memories.
+          </h2>
+          <p class="mt-2.5 text-xs sm:text-sm text-ink-muted">
+            Sample feedback showcasing the dining experiences Fir Milenge is designed around. Verified guest reviews can be linked here upon launch.
+          </p>
+        </div>
+
+        <div class="reveal-on-scroll mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">
+          <!-- Review 1: Signature Food -->
+          <article class="flex flex-col justify-between rounded-xl border border-sand bg-white p-6 shadow-card">
+            <div>
+              <div class="flex items-center justify-between">
+                <span class="rounded-full bg-gold/15 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-gold-dark">Signature Food</span>
+                <i data-lucide="quote" class="h-5 w-5 text-gold/60" aria-hidden="true"></i>
+              </div>
+              <p class="mt-4 text-sm leading-relaxed text-ink">
+                “The Thetcha Three Cheese Naan Bombs were an instant table favourite—smoky, spicy, and wonderfully balanced. Finding creative pure vegetarian fusion dishes that feel both comforting and fresh is rare in Malad West.”
+              </p>
+            </div>
+            <div class="mt-5 border-t border-sand pt-4 flex items-center justify-between text-xs">
+              <span class="font-semibold text-forest">Sample Guest Experience</span>
+              <span class="text-ink-muted">Dinner Dine-In</span>
+            </div>
+          </article>
+
+          <!-- Review 2: Jain Customization -->
+          <article class="flex flex-col justify-between rounded-xl border border-sand bg-white p-6 shadow-card">
+            <div>
+              <div class="flex items-center justify-between">
+                <span class="rounded-full bg-forest/10 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-forest">Jain Customization</span>
+                <i data-lucide="quote" class="h-5 w-5 text-gold/60" aria-hidden="true"></i>
+              </div>
+              <p class="mt-4 text-sm leading-relaxed text-ink">
+                “Our elders follow strict Jain preferences while the younger ones wanted Oriental flavours. The captain patiently guided us through Jain-style Paneer Chilli and Dal Makhani without compromising on taste at all.”
+              </p>
+            </div>
+            <div class="mt-5 border-t border-sand pt-4 flex items-center justify-between text-xs">
+              <span class="font-semibold text-forest">Sample Guest Experience</span>
+              <span class="text-ink-muted">Family Dinner</span>
+            </div>
+          </article>
+
+          <!-- Review 3: Family Experience -->
+          <article class="flex flex-col justify-between rounded-xl border border-sand bg-white p-6 shadow-card">
+            <div>
+              <div class="flex items-center justify-between">
+                <span class="rounded-full bg-forest/10 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-forest">Family Experience</span>
+                <i data-lucide="quote" class="h-5 w-5 text-gold/60" aria-hidden="true"></i>
+              </div>
+              <p class="mt-4 text-sm leading-relaxed text-ink">
+                “Hosted a 22-guest family get-together in their private dining area. Warm ambience, unhurried hospitality, and right opposite Mithchowki Metro—everyone from grandparents to kids had a comfortable evening.”
+              </p>
+            </div>
+            <div class="mt-5 border-t border-sand pt-4 flex items-center justify-between text-xs">
+              <span class="font-semibold text-forest">Sample Guest Experience</span>
+              <span class="text-ink-muted">Group Celebration</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         SECTION 08 – DIRECT TAKEAWAY BANNER
+         ======================================================================== -->
+    <section id="takeaway" class="py-10 sm:py-14 bg-cream">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="reveal-on-scroll relative overflow-hidden rounded-2xl border border-gold/40 bg-forest text-white shadow-soft">
+          <div class="grid grid-cols-1 items-center lg:grid-cols-12">
+            <!-- Copy & CTAs -->
+            <div class="relative z-10 p-7 sm:p-10 lg:col-span-7 lg:p-12">
+              <span class="inline-block rounded-full border border-gold/50 bg-forest-dark/60 px-3.5 py-1 text-[11px] font-bold uppercase tracking-[0.18em] text-gold-light">
+                Direct Takeaway • Zero App Markups
+              </span>
+              <h2 class="mt-4 font-serif text-2xl font-bold leading-snug text-white sm:text-4xl">
+                Your Favourite Food, Without the Extra Markups.
+              </h2>
+              <p class="mt-3 max-w-xl text-sm sm:text-base leading-relaxed text-cream/90">
+                Ordering at home in Malad or Kandivali? Call or WhatsApp Fir Milenge directly for takeaway inquiries.
+              </p>
+
+              <div class="mt-7 flex flex-col gap-3 sm:flex-row sm:items-center">
+                <a
+                  href="tel:+919821611116"
+                  class="inline-flex items-center justify-center gap-2 rounded-full bg-gold px-6 py-3 text-sm font-bold tracking-wide text-forest-dark transition-all hover:bg-gold-light"
+                >
+                  <i data-lucide="phone" class="h-4 w-4" aria-hidden="true"></i>
+                  <span>CALL NOW</span>
+                </a>
+                <a
+                  href="https://wa.me/919821611116?text=Hi%20Fir%20Milenge%2C%20I%20would%20like%20to%20enquire%20about%20a%20takeaway%20order."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center justify-center gap-2 rounded-full border border-white/60 bg-white/10 px-6 py-3 text-sm font-semibold tracking-wide text-white transition-all hover:border-gold-light hover:bg-white/20"
+                >
+                  <i data-lucide="message-circle" class="h-4 w-4 text-gold-light" aria-hidden="true"></i>
+                  <span>WHATSAPP ORDER</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Appetizing Food Image -->
+            <div class="relative h-56 sm:h-64 lg:col-span-5 lg:h-full">
+              <img
+                src="https://images.unsplash.com/photo-1767114915989-c6ab3c8fc42e?auto=format&fit=crop&w=1000&q=80"
+                alt="Freshly prepared bowls of pure vegetarian Indian curry, basmati rice, and aromatic spices ready for direct takeaway"
+                class="h-full w-full object-cover"
+                loading="lazy"
+                onerror="handleImageError(this, 'Direct Takeaway — Fir Milenge')"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-forest via-transparent to-transparent lg:bg-gradient-to-r lg:from-forest lg:via-forest/25 lg:to-transparent"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         SECTION 09 – LOCATION & DIRECTIONS
+         ======================================================================== -->
+    <section id="location" class="py-16 sm:py-20 lg:py-24 bg-cream">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:items-center">
+          <!-- Address & Actions -->
+          <div class="reveal-on-scroll lg:col-span-5">
+            <span class="text-xs font-bold uppercase tracking-[0.2em] text-gold-dark">Visit Us</span>
+            <h2 class="mt-2 font-serif text-3xl font-bold text-forest sm:text-4xl">
+              Find Us in Malad West
+            </h2>
+            <p class="mt-3 text-base text-ink-muted">
+              Located at Rajanpara flamingos 102, Link Rd, Jai Janata Nagar, Malad West.
+            </p>
+
+            <div class="mt-6 rounded-xl border border-sand bg-white p-5 shadow-card space-y-3">
+              <div class="flex items-start gap-3">
+                <i data-lucide="map-pin" class="mt-0.5 h-5 w-5 shrink-0 text-forest" aria-hidden="true"></i>
+                <p class="text-sm leading-relaxed text-ink">
+                  Fir Milenge, Rajanpara flamingos 102, Pice of mind center, Link Rd, Malad, Jai Janata Nagar, Malad West, Mumbai, Maharashtra 400064.
+                </p>
+              </div>
+              <div class="flex items-center gap-3 text-sm text-ink-muted">
+                <i data-lucide="clock" class="h-4 w-4 shrink-0 text-forest" aria-hidden="true"></i>
+                <span>Open Daily: 12:00 PM – 11:30 PM</span>
+              </div>
+            </div>
+
+            <div class="mt-6 flex flex-col gap-3 sm:flex-row">
+              <a
+                href="https://www.google.com/maps/dir/?api=1&destination=Fir+milenge%2C+Rajanpara+flamingos+102%2C+Pice+of+mind+center%2C+Link+Rd%2C+Malad%2C+Jai+Janata+Nagar%2C+Malad+West%2C+Mumbai%2C+Maharashtra+400064"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center justify-center gap-2 rounded-full bg-forest px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-forest-light"
+              >
+                <i data-lucide="navigation" class="h-4 w-4 text-gold-light" aria-hidden="true"></i>
+                <span>GET DIRECTIONS</span>
+              </a>
+              <a
+                href="tel:+919821611116"
+                class="inline-flex items-center justify-center gap-2 rounded-full border border-forest px-6 py-3 text-sm font-semibold text-forest transition-all hover:bg-forest/5"
+              >
+                <i data-lucide="phone" class="h-4 w-4" aria-hidden="true"></i>
+                <span>CALL RESTAURANT</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Google Maps Embed -->
+          <div class="reveal-on-scroll lg:col-span-7">
+            <div class="overflow-hidden rounded-xl border border-sand bg-white p-2 shadow-soft">
+              <div class="aspect-[16/10] w-full overflow-hidden rounded-lg bg-sand/40">
+                <iframe
+                  title="Map showing Fir Milenge at Rajanpara flamingos 102, Pice of mind center, Link Rd, Jai Janata Nagar, Malad West, Mumbai"
+                  src="https://maps.google.com/maps?q=Fir+milenge%2C+Rajanpara+flamingos+102%2C+Pice+of+mind+center%2C+Link+Rd%2C+Malad%2C+Jai+Janata+Nagar%2C+Malad+West%2C+Mumbai%2C+Maharashtra+400064&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                  class="h-full w-full border-0"
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       SECTION 10 – PREMIUM FOOTER
+       ======================================================================== -->
+  <footer class="bg-forest-dark text-cream border-t border-gold/30">
+    <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+      <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
+        <!-- Brand Column -->
+        <div>
+          <div class="flex items-center gap-2.5">
+            <span class="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 border border-gold/40" aria-hidden="true">
+              <svg class="h-5 w-5 text-gold-light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" fill="#C59B27" fill-opacity="0.22"/>
+                <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/>
+              </svg>
+            </span>
+            <span class="font-serif text-xl font-bold tracking-wide text-white">FIR MILENGE</span>
+          </div>
+          <p class="mt-3 text-sm leading-relaxed text-cream/80">
+            100% Pure Vegetarian &amp; Jain-Friendly Family Dining.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h3 class="font-serif text-base font-bold text-gold-light">Quick Links</h3>
+          <ul class="mt-3.5 grid grid-cols-2 gap-x-4 gap-y-2 text-sm text-cream/85">
+            <li><a href="#home" class="hover:text-gold-light transition-colors">Home</a></li>
+            <li><a href="#menu" class="hover:text-gold-light transition-colors">Menu</a></li>
+            <li><a href="#parties" class="hover:text-gold-light transition-colors">Private Parties</a></li>
+            <li><a href="#reviews" class="hover:text-gold-light transition-colors">Reviews</a></li>
+            <li><a href="#location" class="hover:text-gold-light transition-colors">Location</a></li>
+            <li><a href="#reserve" class="hover:text-gold-light transition-colors">Book Table</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Details -->
+        <div>
+          <h3 class="font-serif text-base font-bold text-gold-light">Contact</h3>
+          <ul class="mt-3.5 space-y-2.5 text-sm text-cream/85">
+            <li class="flex items-center gap-2">
+              <i data-lucide="phone" class="h-4 w-4 shrink-0 text-gold-light" aria-hidden="true"></i>
+              <a href="tel:+919821611116" class="hover:text-gold-light">+91 98216 11116</a>
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="phone" class="h-4 w-4 shrink-0 text-gold-light" aria-hidden="true"></i>
+              <a href="tel:+919619911116" class="hover:text-gold-light">+91 96199 11116</a>
+            </li>
+            <li class="flex items-start gap-2">
+              <i data-lucide="map-pin" class="mt-0.5 h-4 w-4 shrink-0 text-gold-light" aria-hidden="true"></i>
+              <span>Fir Milenge, Rajanpara flamingos 102, Pice of mind center, Link Rd, Malad, Jai Janata Nagar, Malad West, Mumbai, Maharashtra 400064.</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="clock" class="h-4 w-4 shrink-0 text-gold-light" aria-hidden="true"></i>
+              <span>12:00 PM – 11:30 PM Daily</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Social & Listing -->
+        <div>
+          <h3 class="font-serif text-base font-bold text-gold-light">Follow Us</h3>
+          <div class="mt-3.5 space-y-3 text-sm text-cream/85">
+            <a
+              href="https://www.instagram.com/firmilengemalad/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 hover:text-gold-light transition-colors"
+            >
+              <i data-lucide="instagram" class="h-4 w-4 text-gold-light" aria-hidden="true"></i>
+              <span>@firmilengemalad</span>
+            </a>
+            <p class="text-xs text-cream/65 leading-relaxed">
+              Zomato listing: Link available once verified URL is provided. Order direct via phone or WhatsApp for best value.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-10 flex flex-col items-center justify-between gap-2 border-t border-white/15 pt-6 text-xs text-cream/70 sm:flex-row">
+        <p>&copy; 2026 Fir Milenge. All Rights Reserved.</p>
+        <p class="text-cream/55">Demo Concept Crafted by AVedTech</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       STICKY MOBILE BOTTOM ACTION BAR (< 768px)
+       ======================================================================== -->
+  <nav
+    aria-label="Mobile Quick Actions"
+    class="mobile-action-bar fixed bottom-0 left-0 right-0 z-40 grid grid-cols-3 border-t border-sand bg-cream/98 shadow-[0_-6px_24px_rgba(27,67,50,0.10)] backdrop-blur-md md:hidden"
+  >
+    <a
+      href="tel:+919821611116"
+      class="flex min-h-[56px] flex-col items-center justify-center gap-1 py-2 text-[11px] font-bold tracking-wide text-forest active:bg-forest/5"
+    >
+      <i data-lucide="phone" class="h-5 w-5 text-forest" aria-hidden="true"></i>
+      <span>CALL</span>
+    </a>
+
+    <a
+      href="#reserve"
+      class="flex min-h-[56px] flex-col items-center justify-center gap-1 border-x border-sand bg-forest/5 py-2 text-[11px] font-bold tracking-wide text-forest active:bg-forest/10"
+    >
+      <i data-lucide="calendar-check" class="h-5 w-5 text-forest" aria-hidden="true"></i>
+      <span>BOOK TABLE</span>
+    </a>
+
+    <a
+      href="https://www.google.com/maps/dir/?api=1&destination=Fir+milenge%2C+Rajanpara+flamingos+102%2C+Pice+of+mind+center%2C+Link+Rd%2C+Malad%2C+Jai+Janata+Nagar%2C+Malad+West%2C+Mumbai%2C+Maharashtra+400064"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="flex min-h-[56px] flex-col items-center justify-center gap-1 py-2 text-[11px] font-bold tracking-wide text-forest active:bg-forest/5"
+    >
+      <i data-lucide="map-pin" class="h-5 w-5 text-forest" aria-hidden="true"></i>
+      <span>DIRECTIONS</span>
+    </a>
+  </nav>
+
+  <!-- ========================================================================
+       ACCESSIBLE CONFIRMATION TOAST
+       ======================================================================== -->
+  <div
+    id="toast-notification"
+    role="status"
+    aria-live="polite"
+    class="pointer-events-none fixed bottom-20 right-4 left-4 z-50 mx-auto max-w-md translate-y-4 opacity-0 transition-all duration-300 md:bottom-6 md:left-auto"
+  >
+    <div class="pointer-events-auto flex items-start gap-3 rounded-xl border border-gold/50 bg-forest-dark px-4 py-3.5 text-white shadow-xl">
+      <i data-lucide="check-circle-2" class="mt-0.5 h-5 w-5 shrink-0 text-gold-light" aria-hidden="true"></i>
+      <p id="toast-message" class="text-xs sm:text-sm leading-relaxed font-medium text-cream"></p>
+      <button id="toast-close-btn" type="button" aria-label="Dismiss notification" class="ml-auto shrink-0 rounded p-1 text-cream/70 hover:text-white">
+        <i data-lucide="x" class="h-4 w-4" aria-hidden="true"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       MODULAR VANILLA JAVASCRIPT (ES6+)
+       ======================================================================== -->
+  <script>
+    'use strict';
+
+    /**
+     * Curated 12-dish menu dataset for Fir Milenge
+     */
+    const MENU_ITEMS = [
+      {
+        id: 1,
+        name: 'Thetcha Three Cheese Naan Bombs',
+        price: 420,
+        category: "Chef's Signatures",
+        jainAvailable: true,
+        bestseller: true,
+        description: 'Fluffy naan bites stuffed with three molten cheeses and fiery Maharashtrian green chilli thetcha.',
+        image: 'https://images.unsplash.com/photo-1763951718950-c536b1295213?auto=format&fit=crop&w=800&q=80'
+      },
+      {
+        id: 2,
+        name: 'Paneer Tikka Lababdar',
+        price: 460,
+        category: 'North Indian',
+        jainAvailable: true,
+        bestseller: false,
+        description: 'Char-grilled cottage cheese simmered in a velvety spiced tomato-cashew gravy finished with butter.',
+        image: 'https://images.unsplash.com/photo-1601050690597-6be9667b9f70?auto=format&fit=crop&w=800&q=80'
+      },
+      {
+        id: 3,
+        name: 'Subz Dum Pukht Biryani',
+        price: 410,
+        category: 'North Indian',
+        jainAvailable: true,
+        bestseller: false,
+        description: 'Long-grain saffron basmati rice slow-cooked on dum with seasonal garden vegetables and whole spices.',
+        image: 'https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=800&q=80'
+      },
+      {
+        id: 4,
+        name: 'Dal Makhani Signature',
+        price: 370,
+        category: 'North Indian',
+        jainAvailable: true,
+        bestseller: false,
+        description: 'Whole black lentils simmered overnight with aromatic spices, white butter, and fresh cream.',
+        image: 'https://images.unsplash.com/photo-1545093149-618ce3bcf49d?auto=format&fit=crop&w=800&q=80'
+      },
+      {
+        id: 5,
+        name: 'Burnt Garlic Exotic Veg Fried Rice',
+        price: 380,
+        category: 'Oriental & Fusion',
+        jainAvailable: false,
+        bestseller: false,
+        description: 'Wok-tossed fragrant rice with crisp exotic vegetables, scallions, and golden-roasted garlic.',
+        image: 'https://images.unsplash.com/photo-1763994682399-fc8d7612c21e?auto=format&fit=crop&w=800&q=80'
+      },
+      {
+        id: 6,
+        name: 'Crispy Lotus Stem in Honey Chilli',
+        price: 395,
+        category: 'Oriental & Fusion',
+        jainAvailable: false,
+        bestseller: false,
+        description: 'Crisp-fried lotus stem slices glazed in sweet honey, crushed chilli, and toasted sesame.',
+        image: 'https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=800&q=80'
+      },
+      {
+        id: 7,
+        name: 'Paneer Chilli Dry (Jain Style)',
+        price: 390,
+        category: 'Oriental & Fusion',
+        jainAvailable: true,
+        bestseller: false,
+        description: 'Crisp cottage cheese cubes tossed with bell peppers and house-special Jain Oriental sauces.',
+        image: 'https://images.unsplash.com/photo-1626700051175-681401c5b64d?auto=format&fit=crop&w=800&q=80'
+      },
+      {
+        id: 8,
+        name: 'Wood-Fired Classic Margherita Pizza',
+        price: 490,
+        category: 'Continental & Pizza',
+        jainAvailable: true,
+        bestseller: false,
+        description: 'Hand-stretched thin crust topped with San Marzano style tomato sauce, mozzarella, and fresh basil.',
+        image: 'https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=800&q=80'
+      },
+      {
+        id: 9,
+        name: 'Aglio Olio Peperoncino Spaghetti',
+        price: 450,
+        category: 'Continental & Pizza',
+        jainAvailable: true,
+        bestseller: false,
+        description: 'Al dente spaghetti tossed in extra-virgin olive oil, red chilli flakes, olives, and Italian herbs.',
+        image: 'https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=800&q=80'
+      },
+      {
+        id: 10,
+        name: 'Mexican Loaded Nachos & Cheese Fondue',
+        price: 430,
+        category: "Chef's Signatures",
+        jainAvailable: true,
+        bestseller: false,
+        description: 'Crunchy corn tortilla chips layered with beans, jalapenos, salsa, and warm cheddar cheese fondue.',
+        image: 'https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=800&q=80'
+      },
+      {
+        id: 11,
+        name: 'Sizzling Brownie with Vanilla Bean Ice Cream',
+        price: 310,
+        category: "Chef's Signatures",
+        jainAvailable: true,
+        bestseller: false,
+        description: 'Warm fudgy chocolate brownie on a hot skillet, crowned with vanilla bean ice cream and chocolate sauce.',
+        image: 'https://images.unsplash.com/photo-1624353365286-3f8d62daad51?auto=format&fit=crop&w=800&q=80'
+      },
+      {
+        id: 12,
+        name: 'Kesar Pista Rasmalai Tres Leches',
+        price: 340,
+        category: "Chef's Signatures",
+        jainAvailable: true,
+        bestseller: false,
+        description: 'Airy sponge soaked in saffron-cardamom milk, topped with whipped cream and roasted pistachios.',
+        image: 'https://images.unsplash.com/photo-1609947017136-9daf32a5eb16?auto=format&fit=crop&w=800&q=80'
+      }
+    ];
+
+    /**
+     * Application Filter State
+     */
+    const menuState = {
+      category: 'All Dishes',
+      jainOnly: false,
+      searchQuery: ''
+    };
+
+    const RESTAURANT_WHATSAPP = '919821611116';
+    let toastTimer = null;
+
+    /**
+     * Graceful Fallback for Images if network fails
+     */
+    function handleImageError(imgEl, labelText) {
+      if (imgEl.dataset.fallbackApplied === 'true') return;
+      imgEl.dataset.fallbackApplied = 'true';
+      const safeLabel = (labelText || 'Fir Milenge').replace(/[<>&"']/g, '');
+      const svg = `
+        <svg xmlns="http://www.w3.org/2000/svg" width="800" height="520" viewBox="0 0 800 520">
+          <defs>
+            <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#1B4332"/>
+              <stop offset="100%" stop-color="#2D6A4F"/>
+            </linearGradient>
+          </defs>
+          <rect width="800" height="520" fill="url(#g)"/>
+          <circle cx="400" cy="220" r="46" fill="none" stroke="#C59B27" stroke-width="2.5"/>
+          <text x="400" y="230" text-anchor="middle" fill="#C59B27" font-family="Georgia, serif" font-size="24" font-weight="bold">FM</text>
+          <text x="400" y="310" text-anchor="middle" fill="#FDFBF7" font-family="Georgia, serif" font-size="22">${safeLabel}</text>
+          <text x="400" y="344" text-anchor="middle" fill="#D9B44A" font-family="sans-serif" font-size="13" letter-spacing="2">100% PURE VEGETARIAN</text>
+        </svg>
+      `.trim();
+      imgEl.src = 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(svg);
+    }
+
+    /**
+     * Sticky Navigation, Scroll State & Mobile Drawer
+     */
+    function initNavigation() {
+      const navbar = document.getElementById('navbar');
+      const mobileBtn = document.getElementById('mobile-menu-btn');
+      const mobilePanel = document.getElementById('mobile-menu-panel');
+      const openIcon = document.getElementById('mobile-menu-icon-open');
+      const closeIcon = document.getElementById('mobile-menu-icon-close');
+      const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+
+      const updateNavOnScroll = () => {
+        if (!navbar) return;
+        if (window.scrollY > 24) {
+          navbar.classList.add('is-scrolled');
+        } else {
+          navbar.classList.remove('is-scrolled');
+        }
+      };
+
+      const setMobileMenuOpen = (isOpen) => {
+        if (!mobilePanel || !mobileBtn) return;
+        mobilePanel.classList.toggle('hidden', !isOpen);
+        mobileBtn.setAttribute('aria-expanded', String(isOpen));
+        mobileBtn.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+        if (openIcon && closeIcon) {
+          openIcon.classList.toggle('hidden', isOpen);
+          closeIcon.classList.toggle('hidden', !isOpen);
+        }
+      };
+
+      window.addEventListener('scroll', updateNavOnScroll, { passive: true });
+      updateNavOnScroll();
+
+      if (mobileBtn) {
+        mobileBtn.addEventListener('click', () => {
+          const currentlyOpen = mobileBtn.getAttribute('aria-expanded') === 'true';
+          setMobileMenuOpen(!currentlyOpen);
+        });
+      }
+
+      mobileLinks.forEach((link) => {
+        link.addEventListener('click', () => setMobileMenuOpen(false));
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && mobileBtn?.getAttribute('aria-expanded') === 'true') {
+          setMobileMenuOpen(false);
+          mobileBtn.focus();
+        }
+      });
+    }
+
+    /**
+     * Filter MENU_ITEMS using active category, Jain toggle, and search query simultaneously
+     */
+    function filterMenu() {
+      const query = menuState.searchQuery.trim().toLowerCase();
+      return MENU_ITEMS.filter((dish) => {
+        const matchesCategory = menuState.category === 'All Dishes' || dish.category === menuState.category;
+        const matchesJain = !menuState.jainOnly || dish.jainAvailable;
+        const matchesSearch =
+          !query ||
+          dish.name.toLowerCase().includes(query) ||
+          dish.description.toLowerCase().includes(query) ||
+          dish.category.toLowerCase().includes(query);
+
+        return matchesCategory && matchesJain && matchesSearch;
+      });
+    }
+
+    /**
+     * Update live dish count label and quick reset visibility
+     */
+    function updateDishCount(count) {
+      const countEl = document.getElementById('dish-count');
+      const quickResetBtn = document.getElementById('quick-reset-btn');
+      if (countEl) {
+        countEl.textContent = `Showing ${count} ${count === 1 ? 'dish' : 'dishes'}.`;
+      }
+      if (quickResetBtn) {
+        const hasActiveFilter =
+          menuState.category !== 'All Dishes' ||
+          menuState.jainOnly ||
+          menuState.searchQuery.trim().length > 0;
+        quickResetBtn.classList.toggle('hidden', !hasActiveFilter);
+      }
+    }
+
+    /**
+     * Render filtered menu cards into #menu-grid
+     */
+    function renderMenu() {
+      const grid = document.getElementById('menu-grid');
+      const emptyState = document.getElementById('menu-empty-state');
+      if (!grid || !emptyState) return;
+
+      const filteredDishes = filterMenu();
+      updateDishCount(filteredDishes.length);
+
+      if (filteredDishes.length === 0) {
+        grid.innerHTML = '';
+        emptyState.classList.remove('hidden');
+        return;
+      }
+
+      emptyState.classList.add('hidden');
+
+      grid.innerHTML = filteredDishes
+        .map((dish) => {
+          const jainBadge = dish.jainAvailable
+            ? `<span class="inline-flex items-center gap-1 rounded-full bg-forest/10 px-2.5 py-0.5 text-[11px] font-semibold text-forest">
+                 <span class="h-1.5 w-1.5 rounded-full bg-forest-light" aria-hidden="true"></span>
+                 Jain Available
+               </span>`
+            : `<span class="inline-flex items-center gap-1 rounded-full bg-gray-100 px-2.5 py-0.5 text-[11px] font-medium text-ink-muted">
+                 Non-Jain
+               </span>`;
+
+          const bestsellerBadge = dish.bestseller
+            ? `<span class="absolute left-3 top-3 inline-flex items-center gap-1 rounded-full bg-gold px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-forest-dark shadow">
+                 Bestseller
+               </span>`
+            : '';
+
+          const waInquiryUrl = `https://wa.me/${RESTAURANT_WHATSAPP}?text=${encodeURIComponent(
+            `Hi Fir Milenge, I would like to enquire about "${dish.name}" (₹${dish.price}) and table availability.`
+          )}`;
+
+          return `
+            <article class="group flex flex-col overflow-hidden rounded-xl border border-sand bg-white shadow-card transition-all duration-300 hover:-translate-y-1 hover:border-gold/60 hover:shadow-soft">
+              <div class="relative aspect-[16/10] w-full overflow-hidden bg-sand/35">
+                <img
+                  src="${dish.image}"
+                  alt="${dish.name}"
+                  class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy"
+                  width="800"
+                  height="500"
+                  onerror="handleImageError(this, '${dish.name.replace(/'/g, '')}')"
+                />
+                ${bestsellerBadge}
+                <span class="absolute right-3 top-3 rounded-full bg-cream/95 px-2.5 py-0.5 text-[10px] font-semibold text-forest shadow-sm backdrop-blur-sm">
+                  ${dish.category}
+                </span>
+              </div>
+
+              <div class="flex flex-1 flex-col justify-between p-4">
+                <div>
+                  <div class="flex items-start justify-between gap-2">
+                    <h3 class="font-serif text-base font-bold leading-snug text-ink group-hover:text-forest transition-colors">
+                      ${dish.name}
+                    </h3>
+                  </div>
+
+                  <div class="mt-2.5 flex items-center justify-between gap-2">
+                    <span class="text-base font-bold text-forest">₹${dish.price}</span>
+                    ${jainBadge}
+                  </div>
+
+                  <p class="mt-2.5 text-xs leading-relaxed text-ink-muted">
+                    ${dish.description}
+                  </p>
+                </div>
+
+                <div class="mt-4 border-t border-sand/80 pt-3 flex items-center justify-between">
+                  <span class="inline-flex items-center gap-1 text-[11px] font-medium text-forest-light">
+                    <span class="inline-flex h-3 w-3 items-center justify-center rounded-[2px] border border-forest-light" aria-hidden="true">
+                      <span class="h-1.5 w-1.5 rounded-full bg-forest-light"></span>
+                    </span>
+                    Pure Veg
+                  </span>
+                  <a
+                    href="${waInquiryUrl}"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center gap-1 text-xs font-semibold text-forest hover:text-gold-dark transition-colors"
+                  >
+                    <span>WhatsApp Inquiry</span>
+                    <i data-lucide="arrow-up-right" class="h-3.5 w-3.5" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+          `;
+        })
+        .join('');
+
+      if (window.lucide) {
+        window.lucide.createIcons();
+      }
+    }
+
+    /**
+     * Reset all menu filters cleanly
+     */
+    function resetMenuFilters() {
+      menuState.category = 'All Dishes';
+      menuState.jainOnly = false;
+      menuState.searchQuery = '';
+
+      const searchInput = document.getElementById('menu-search');
+      if (searchInput) searchInput.value = '';
+
+      syncMenuControlUI();
+      renderMenu();
+    }
+
+    /**
+     * Sync button/toggle styling with menuState
+     */
+    function syncMenuControlUI() {
+      document.querySelectorAll('.category-btn').forEach((btn) => {
+        const isActive = btn.dataset.category === menuState.category;
+        btn.setAttribute('aria-pressed', String(isActive));
+        if (isActive) {
+          btn.classList.remove('border', 'border-sand', 'bg-cream', 'text-ink');
+          btn.classList.add('bg-forest', 'text-white');
+        } else {
+          btn.classList.remove('bg-forest', 'text-white');
+          btn.classList.add('border', 'border-sand', 'bg-cream', 'text-ink');
+        }
+      });
+
+      const jainBtn = document.getElementById('jain-toggle-btn');
+      const switchTrack = document.getElementById('jain-switch-track');
+      const switchThumb = document.getElementById('jain-switch-thumb');
+
+      if (jainBtn && switchTrack && switchThumb) {
+        jainBtn.setAttribute('aria-checked', String(menuState.jainOnly));
+        jainBtn.classList.toggle('bg-forest', menuState.jainOnly);
+        jainBtn.classList.toggle('text-white', menuState.jainOnly);
+        jainBtn.classList.toggle('bg-forest/5', !menuState.jainOnly);
+        jainBtn.classList.toggle('text-forest', !menuState.jainOnly);
+
+        switchTrack.classList.toggle('bg-gold', menuState.jainOnly);
+        switchTrack.classList.toggle('bg-gray-300', !menuState.jainOnly);
+        switchThumb.classList.toggle('translate-x-4', menuState.jainOnly);
+        switchThumb.classList.toggle('translate-x-1', !menuState.jainOnly);
+      }
+    }
+
+    /**
+     * Initialize Menu Event Listeners
+     */
+    function initMenuControls() {
+      document.querySelectorAll('.category-btn').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          menuState.category = btn.dataset.category;
+          syncMenuControlUI();
+          renderMenu();
+        });
+      });
+
+      const jainBtn = document.getElementById('jain-toggle-btn');
+      if (jainBtn) {
+        jainBtn.addEventListener('click', () => {
+          menuState.jainOnly = !menuState.jainOnly;
+          syncMenuControlUI();
+          renderMenu();
+        });
+      }
+
+      const searchInput = document.getElementById('menu-search');
+      if (searchInput) {
+        searchInput.addEventListener('input', (event) => {
+          menuState.searchQuery = event.target.value;
+          renderMenu();
+        });
+      }
+
+      document.getElementById('quick-reset-btn')?.addEventListener('click', resetMenuFilters);
+      document.getElementById('empty-reset-btn')?.addEventListener('click', resetMenuFilters);
+
+      renderMenu();
+    }
+
+    /**
+     * Pre-select Private Party booking options and scroll smoothly to #reserve
+     */
+    function selectPartyBooking() {
+      const guestSelect = document.getElementById('guest-count');
+      const seatingSelect = document.getElementById('seating-pref');
+      const notesField = document.getElementById('additional-notes');
+      const formEl = document.getElementById('reservation-form');
+      const nameField = document.getElementById('guest-name');
+
+      if (guestSelect) guestSelect.value = '20–25 Private Party';
+      if (seatingSelect) seatingSelect.value = 'Private Party Section (20–25 Pax)';
+      if (notesField && !notesField.value.trim()) {
+        notesField.value = 'Requesting private party package quote for 20–25 guests.';
+      }
+
+      const reserveSection = document.getElementById('reserve');
+      if (reserveSection) {
+        reserveSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+
+      if (formEl) {
+        formEl.classList.remove('form-highlight');
+        void formEl.offsetWidth;
+        formEl.classList.add('form-highlight');
+      }
+
+      setTimeout(() => {
+        nameField?.focus({ preventScroll: true });
+      }, 450);
+
+      showToast('Private Party options selected! Complete your details below to request a quote on WhatsApp.');
+    }
+
+    /**
+     * Get local YYYY-MM-DD string to enforce min date on reservation date picker
+     */
+    function getTodayLocalISO() {
+      const now = new Date();
+      const year = now.getFullYear();
+      const month = String(now.getMonth() + 1).padStart(2, '0');
+      const day = String(now.getDate()).padStart(2, '0');
+      return `${year}-${month}-${day}`;
+    }
+
+    function initDateConstraint() {
+      const dateInput = document.getElementById('preferred-date');
+      if (!dateInput) return;
+      const today = getTodayLocalISO();
+      dateInput.min = today;
+      if (!dateInput.value) {
+        dateInput.value = today;
+      }
+    }
+
+    /**
+     * Validate reservation form fields cleanly
+     */
+    function validateReservationForm() {
+      const nameInput = document.getElementById('guest-name');
+      const phoneInput = document.getElementById('guest-phone');
+      const dateInput = document.getElementById('preferred-date');
+
+      const nameErr = document.getElementById('guest-name-error');
+      const phoneErr = document.getElementById('guest-phone-error');
+      const dateErr = document.getElementById('preferred-date-error');
+
+      let isValid = true;
+      let firstInvalid = null;
+
+      const setFieldError = (input, errEl, message) => {
+        if (!input || !errEl) return;
+        if (message) {
+          errEl.textContent = message;
+          errEl.classList.remove('hidden');
+          input.classList.add('border-red-500');
+          input.setAttribute('aria-invalid', 'true');
+          input.setAttribute('aria-describedby', errEl.id);
+          isValid = false;
+          if (!firstInvalid) firstInvalid = input;
+        } else {
+          errEl.textContent = '';
+          errEl.classList.add('hidden');
+          input.classList.remove('border-red-500');
+          input.removeAttribute('aria-invalid');
+          input.removeAttribute('aria-describedby');
+        }
+      };
+
+      const nameVal = (nameInput?.value || '').trim();
+      if (nameVal.length < 2) {
+        setFieldError(nameInput, nameErr, 'Please enter your full name (at least 2 characters).');
+      } else {
+        setFieldError(nameInput, nameErr, '');
+      }
+
+      const rawPhone = (phoneInput?.value || '').replace(/\D/g, '');
+      const normalizedPhone = rawPhone.length === 12 && rawPhone.startsWith('91') ? rawPhone.slice(2) : rawPhone;
+      if (!/^[6-9]\d{9}$/.test(normalizedPhone)) {
+        setFieldError(phoneInput, phoneErr, 'Enter a valid 10-digit Indian mobile number.');
+      } else {
+        if (phoneInput) phoneInput.value = normalizedPhone;
+        setFieldError(phoneInput, phoneErr, '');
+      }
+
+      const dateVal = dateInput?.value || '';
+      const today = getTodayLocalISO();
+      if (!dateVal) {
+        setFieldError(dateInput, dateErr, 'Please choose a preferred date.');
+      } else if (dateVal < today) {
+        setFieldError(dateInput, dateErr, 'Past dates cannot be selected. Please pick today or a future date.');
+      } else {
+        setFieldError(dateInput, dateErr, '');
+      }
+
+      if (firstInvalid) {
+        firstInvalid.focus();
+      }
+
+      return isValid;
+    }
+
+    /**
+     * Format reservation details for WhatsApp URL
+     */
+    function buildWhatsAppMessage(formData) {
+      const lines = [
+        '*Table Reservation Request — FIR MILENGE*',
+        '----------------------------------',
+        `Guest Name: ${formData.guestName}`,
+        `Mobile Number: +91 ${formData.guestPhone}`,
+        `Preferred Date: ${formData.preferredDate}`,
+        `Preferred Time Slot: ${formData.timeSlot}`,
+        `Number of Guests: ${formData.guestCount}`,
+        `Seating Preference: ${formData.seatingPreference}`,
+        `Jain Food Preparation: ${formData.jainRequirement ? 'Yes, Jain preparations required' : 'Not specified'}`,
+        `Additional Notes: ${formData.additionalNotes || 'None'}`,
+        '----------------------------------',
+        'Sent via fir-milenge.com website (Subject to restaurant confirmation).'
+      ];
+      return lines.join('\n');
+    }
+
+    /**
+     * Handle reservation form submission -> validate -> open WhatsApp -> show toast
+     */
+    function submitReservation(event) {
+      event.preventDefault();
+      if (!validateReservationForm()) return;
+
+      const formData = {
+        guestName: document.getElementById('guest-name').value.trim(),
+        guestPhone: document.getElementById('guest-phone').value.trim(),
+        preferredDate: document.getElementById('preferred-date').value,
+        timeSlot: document.getElementById('time-slot').value,
+        guestCount: document.getElementById('guest-count').value,
+        seatingPreference: document.getElementById('seating-pref').value,
+        jainRequirement: document.getElementById('jain-requirement').checked,
+        additionalNotes: document.getElementById('additional-notes').value.trim()
+      };
+
+      const message = buildWhatsAppMessage(formData);
+      const whatsappUrl = `https://wa.me/${RESTAURANT_WHATSAPP}?text=${encodeURIComponent(message)}`;
+
+      window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+      showToast('Your reservation request is ready! Continue the conversation on WhatsApp to confirm your booking.');
+    }
+
+    /**
+     * Accessible Confirmation Toast
+     */
+    function showToast(message) {
+      const toast = document.getElementById('toast-notification');
+      const msgEl = document.getElementById('toast-message');
+      if (!toast || !msgEl) return;
+
+      msgEl.textContent = message;
+      toast.classList.remove('translate-y-4', 'opacity-0', 'pointer-events-none');
+      toast.classList.add('translate-y-0', 'opacity-100');
+
+      if (toastTimer) clearTimeout(toastTimer);
+      toastTimer = setTimeout(hideToast, 6500);
+    }
+
+    function hideToast() {
+      const toast = document.getElementById('toast-notification');
+      if (!toast) return;
+      toast.classList.add('translate-y-4', 'opacity-0', 'pointer-events-none');
+      toast.classList.remove('translate-y-0', 'opacity-100');
+    }
+
+    /**
+     * IntersectionObserver for subtle reveal-on-scroll animations
+     */
+    function initRevealAnimations() {
+      const elements = document.querySelectorAll('.reveal-on-scroll');
+      const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      if (prefersReduced || !('IntersectionObserver' in window)) {
+        elements.forEach((el) => el.classList.add('is-visible'));
+        return;
+      }
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.12, rootMargin: '0px 0px -30px 0px' }
+      );
+
+      elements.forEach((el) => observer.observe(el));
+    }
+
+    /**
+     * Bootstrap all interactive features on DOMContentLoaded
+     */
+    document.addEventListener('DOMContentLoaded', () => {
+      initNavigation();
+      initMenuControls();
+      initDateConstraint();
+      initRevealAnimations();
+
+      document.getElementById('party-quote-btn')?.addEventListener('click', selectPartyBooking);
+      document.getElementById('reservation-form')?.addEventListener('submit', submitReservation);
+      document.getElementById('toast-close-btn')?.addEventListener('click', hideToast);
+
+      if (window.lucide) {
+        window.lucide.createIcons();
+      }
+    });
+  </script>
+</body>
+</html>
